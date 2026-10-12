@@ -1,0 +1,280 @@
+/* ==========================================================================
+   MEHTA ASSOCIATES - RESPONSIVE STYLESHEET
+   Breakpoints: 1200px, 992px, 768px, 576px
+   ========================================================================== */
+
+/* Large Tablets & Small Laptops (<= 1150px) */
+@media (max-width: 1150px) {
+  .header-sourcing-badge {
+    display: none; /* Hide badge on medium viewports to avoid cramping navigation */
+  }
+
+  .nav-desktop {
+    gap: 0.25rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.65rem;
+    font-size: 0.875rem;
+  }
+
+  .hero-grid {
+    gap: 2.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2.5rem;
+  }
+
+  .stat-item:nth-child(2)::after {
+    display: none;
+  }
+
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-top {
+    grid-template-columns: 1.2fr 1fr;
+    row-gap: 2.5rem;
+  }
+}
+
+/* Medium Tablets & Mobile Landscape (<= 992px) */
+@media (max-width: 992px) {
+  :root {
+    --header-height: 72px;
+  }
+
+  .top-bar {
+    display: none; /* Hide top bar on mobile/tablet to keep header streamlined */
+  }
+
+  .nav-desktop,
+  .header-cta-group .btn {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .hero-visual {
+    max-width: 560px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero-floating-card {
+    left: 10px;
+    bottom: -15px;
+  }
+
+  .hero-badge-corner {
+    right: 10px;
+    top: 10px;
+  }
+
+  .exhibition-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-split {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .about-visual {
+    max-width: 560px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .about-quote-card {
+    right: 10px;
+    bottom: -20px;
+  }
+
+  .strengths-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brochure-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .enquiry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .enquiry-sidebar {
+    padding: 2.5rem 2rem;
+  }
+
+  .enquiry-form-container {
+    padding: 2.5rem 2rem;
+  }
+
+  .contact-details-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Tablets Portrait & Large Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .hero {
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-main-card img {
+    height: 320px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-trust-indicators {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  /* Responsive Hero Slider Controls */
+  .hero-slider-controls {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .slider-indicators {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .tab-progress-bar {
+    width: 100%;
+    max-width: 80px;
+  }
+
+  .slider-arrows {
+    justify-content: flex-end;
+  }
+
+  .strengths-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partners-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .founder-tribute {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.75rem 1.5rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+
+  .stat-item::after {
+    display: none !important;
+  }
+
+  .floating-whatsapp-wrap {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .whatsapp-popup {
+    width: calc(100vw - 40px);
+    right: 0;
+  }
+}
+
+/* Small Mobile (<= 480px) */
+@media (max-width: 480px) {
+  :root {
+    --container-pad: 1rem;
+  }
+
+  .brand-logo {
+    height: 44px;
+  }
+
+  .hero-floating-card {
+    position: static;
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+
+  .hero-badge-corner {
+    position: static;
+    margin-top: 1rem;
+    display: inline-block;
+  }
+
+  .exhibition-card {
+    padding: 1.5rem 1.15rem;
+  }
+
+  .about-quote-card {
+    position: static;
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+
+  .brochure-card-preview {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .enquiry-sidebar,
+  .enquiry-form-container {
+    padding: 2rem 1.25rem;
+  }
+}

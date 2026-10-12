@@ -1,0 +1,344 @@
+[
+  {
+    "id": "aspirin-granules-ip",
+    "name": "Aspirin Granules IP",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "50-78-2",
+    "description": "High-purity Acetylsalicylic Acid in granular formulation for direct compression in pharmaceutical manufacturing.",
+    "applications": "Analgesic, Antipyretic, Anti-inflammatory tablet formulation"
+  },
+  {
+    "id": "aspirin-powder-ip",
+    "name": "Aspirin Powder IP",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "50-78-2",
+    "description": "Pure pharmaceutical grade Acetylsalicylic Acid powder meeting full Indian Pharmacopoeial standards.",
+    "applications": "Solid dosage formulations, analgesics"
+  },
+  {
+    "id": "ambroxol-hcl-ip",
+    "name": "Ambroxol HCL IP",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "23828-92-4",
+    "description": "Potent mucolytic and secretolytic API used across oral liquid and solid respiratory formulations.",
+    "applications": "Cough syrups, expectorants, respiratory tablets"
+  },
+  {
+    "id": "benzyl-alcohol-ip",
+    "name": "Benzyl Alcohol IP",
+    "category": "Preservatives & Excipients",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "100-51-6",
+    "description": "Clear, colorless pharmaceutical preservative and bacteriostatic agent with low volatility.",
+    "applications": "Injectable solutions, topical creams, oral liquids"
+  },
+  {
+    "id": "cetrimide-ip",
+    "name": "Cetrimide IP",
+    "category": "Antiseptics & Disinfectants",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "8044-71-1",
+    "description": "Quaternary ammonium compound with broad antimicrobial efficacy against bacteria and fungi.",
+    "applications": "Topical antiseptics, wound cleaning, disinfectant solutions"
+  },
+  {
+    "id": "strong-cetrimide-solution-40",
+    "name": "Strong Cetrimide Solution 40%",
+    "category": "Antiseptics & Disinfectants",
+    "grade": "Concentrated Technical / Pharma",
+    "cas": "8044-71-1",
+    "description": "Concentrated 40% aqueous cetrimide solution for industrial dilution and formulation.",
+    "applications": "Institutional disinfectants, hospital sanitizers, formulation stock"
+  },
+  {
+    "id": "chlorhexidine-gluconate-20-ip",
+    "name": "Chlorhexidine Gluconate 20% IP",
+    "category": "Antiseptics & Disinfectants",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "18472-51-0",
+    "description": "20% v/v pharmaceutical concentrated solution of Chlorhexidine Digluconate for surgical and oral applications.",
+    "applications": "Surgical scrub, mouthwash, surface antisepsis"
+  },
+  {
+    "id": "chlorhexidine-hcl-ip",
+    "name": "Chlorhexidine HCL IP",
+    "category": "Antiseptics & Disinfectants",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "3697-83-6",
+    "description": "Hydrochloride salt of chlorhexidine in solid powder form, used as a topical antiseptic and disinfectant.",
+    "applications": "Topical creams, ointments, medicated dressings"
+  },
+  {
+    "id": "chromium-picolinate-usp",
+    "name": "Chromium Picolinate USP",
+    "category": "Minerals & Nutritional Supplements",
+    "grade": "USP (United States Pharmacopeia)",
+    "cas": "14639-25-9",
+    "description": "Premium bioavailable trivalent chromium compound formulated for nutritional supplementation.",
+    "applications": "Dietary supplements, metabolic support, nutraceuticals"
+  },
+  {
+    "id": "chromium-polynicotinate",
+    "name": "Chromium Polynicotinate",
+    "category": "Minerals & Nutritional Supplements",
+    "grade": "Nutraceutical / Food Grade",
+    "cas": "64452-96-6",
+    "description": "Niacin-bound chromium mineral complex facilitating optimal physiological absorption.",
+    "applications": "Nutraceutical premixes, dietary tablets & capsules"
+  },
+  {
+    "id": "choline-salicylate-bp",
+    "name": "Choline Salicylate BP",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "BP (British Pharmacopoeia)",
+    "cas": "2016-36-6",
+    "description": "Fast-acting analgesic and anti-inflammatory salicylate salt widely used for oral mucosal care.",
+    "applications": "Mouth ulcer gels, dental formulations, topical analgesics"
+  },
+  {
+    "id": "diethyl-carbamazine-citrate-ip",
+    "name": "Diethyl Carbamazine Citrate IP (DEC)",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "1642-54-2",
+    "description": "Synthetic anthelmintic agent essential for public health treatment of lymphatic filariasis.",
+    "applications": "Filariasis treatment, anti-parasitic tablets & syrups"
+  },
+  {
+    "id": "diphenhydramine-hcl-ip",
+    "name": "Diphenhydramine HCL IP",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "147-24-0",
+    "description": "First-generation antihistamine with anticholinergic and sedative properties meeting strict IP criteria.",
+    "applications": "Anti-allergy formulations, cough syrups, motion sickness"
+  },
+  {
+    "id": "doss-bp",
+    "name": "D.O.S.S BP (Dioctyl Sodium Sulfosuccinate)",
+    "category": "Preservatives & Excipients",
+    "grade": "BP (British Pharmacopoeia)",
+    "cas": "577-11-7",
+    "description": "Effective anionic wetting agent and pharmaceutical surfactant with superior solubilization performance.",
+    "applications": "Laxative formulations, suspension stabilizing, emulsifying"
+  },
+  {
+    "id": "docusate-sodium-powder-85",
+    "name": "Docusate Sodium Powder 85%",
+    "category": "Preservatives & Excipients",
+    "grade": "Pharma Grade 85%",
+    "cas": "577-11-7",
+    "description": "Solid powder format of docusate sodium blended for ease of handling and homogeneous formulation.",
+    "applications": "Solid dosage stool softeners, excipient applications"
+  },
+  {
+    "id": "eucalyptus-oil",
+    "name": "Eucalyptus Oil",
+    "category": "Essential Oils & Botanicals",
+    "grade": "Natural / Pharmaceutical Grade",
+    "cas": "8000-48-4",
+    "description": "Pure steam-distilled cineole-rich essential oil exhibiting natural decongestant and antimicrobial properties.",
+    "applications": "Inhalation formulations, liniments, balms, vapor rubs"
+  },
+  {
+    "id": "iodoform",
+    "name": "Iodoform",
+    "category": "Antiseptics & Disinfectants",
+    "grade": "Pure Pharma Grade",
+    "cas": "75-47-8",
+    "description": "Organosulfur yellow crystalline substance utilized for surgical dressings and endodontic treatments.",
+    "applications": "Dental root canal pastes, wound dressings, antiseptic gauze"
+  },
+  {
+    "id": "lemongrass-oil",
+    "name": "Lemongrass Oil",
+    "category": "Essential Oils & Botanicals",
+    "grade": "Natural Steam Distilled",
+    "cas": "8007-02-1",
+    "description": "Citral-rich natural aromatic oil used for topical, aromatherapeutic, and pharmaceutical preparation.",
+    "applications": "Pain relief oils, insect repellents, aromatic liniments"
+  },
+  {
+    "id": "methyl-nicotinate-bp",
+    "name": "Methyl Nicotinate BP",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "BP (British Pharmacopoeia)",
+    "cas": "93-60-7",
+    "description": "Rubefacient agent causing localized vasodilation and warmth, widely incorporated into counterirritants.",
+    "applications": "Topical muscle rubs, arthritic pain ointments"
+  },
+  {
+    "id": "methyl-paraben-ip",
+    "name": "Methyl Paraben IP (Methylparaben)",
+    "category": "Preservatives & Excipients",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "99-76-3",
+    "description": "Industry-standard antifungal and antibacterial preservative for pharmaceutical dosage forms.",
+    "applications": "Liquid orals, suspensions, cosmetic and dermatological topicals"
+  },
+  {
+    "id": "methyl-salicylate-ip",
+    "name": "Methyl Salicylate IP",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "119-36-8",
+    "description": "Wintergreen ester widely used as a topical analgesic and counter-irritant for musculo-skeletal pain.",
+    "applications": "Pain relief sprays, balms, liniments, sports ointments"
+  },
+  {
+    "id": "mephenesine-ip",
+    "name": "Mephenesine IP",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "59-47-2",
+    "description": "Centrally acting skeletal muscle relaxant used in oral tablets and topical pain formulations.",
+    "applications": "Skeletal muscle spasms, analgesic gels & tablets"
+  },
+  {
+    "id": "menthol-bold-crystal",
+    "name": "Menthol Bold Crystal",
+    "category": "Essential Oils & Botanicals",
+    "grade": "Natural / Pure Crystals",
+    "cas": "2216-51-5",
+    "description": "High-purity bold natural crystalline menthol derived from Mentha arvensis providing intense cooling.",
+    "applications": "Ointments, balms, throat lozenges, inhalers, cough drops"
+  },
+  {
+    "id": "piperazine-citrate-ip",
+    "name": "Piperazine Citrate IP",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "144-29-6",
+    "description": "Anthelmintic active pharmaceutical ingredient highly soluble and suitable for pediatric formulations.",
+    "applications": "Deworming syrups, pediatric anthelmintic suspension"
+  },
+  {
+    "id": "piperazine-hexahydrate-ip",
+    "name": "Piperazine Hexahydrate IP",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "142-63-2",
+    "description": "Hydrated piperazine crystal form used across human and veterinary anti-parasitic dosage manufacturing.",
+    "applications": "Human & veterinary anthelmintic pharmaceuticals"
+  },
+  {
+    "id": "piperazine-phosphate-ip",
+    "name": "Piperazine Phosphate IP",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "1951-97-9",
+    "description": "Stable phosphate salt of piperazine preferred for solid compression into anthelmintic tablets.",
+    "applications": "Anthelmintic tablets, veterinary bolus formulations"
+  },
+  {
+    "id": "piperazine-adipate-ip",
+    "name": "Piperazine Adipate IP",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "142-88-1",
+    "description": "Adipate salt formulation offering high chemical stability and mild palatability in oral dosage forms.",
+    "applications": "Solid anthelmintic doses, roundworm treatment"
+  },
+  {
+    "id": "propyl-paraben-ip",
+    "name": "Propyl Paraben IP (Propylparaben)",
+    "category": "Preservatives & Excipients",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "94-13-3",
+    "description": "Lipophilic antimicrobial preservative frequently combined with methylparaben for synergistic efficacy.",
+    "applications": "Pharmaceutical syrups, topical ointments, cosmetics"
+  },
+  {
+    "id": "salicylic-acid-ip",
+    "name": "Salicylic Acid IP",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "69-72-7",
+    "description": "Monohydroxybenzoic acid with potent keratolytic and comedolytic actions for dermatological drugs.",
+    "applications": "Acne formulations, keratolytic ointments, topical solutions"
+  },
+  {
+    "id": "technical-salicylic-acid",
+    "name": "Technical Salicylic Acid",
+    "category": "Technical & Industrial Chemicals",
+    "grade": "Technical Grade",
+    "cas": "69-72-7",
+    "description": "High-assay industrial intermediate for chemical synthesis, dye manufacture, and preservative synthesis.",
+    "applications": "Chemical synthesis intermediate, resins, rubber additives"
+  },
+  {
+    "id": "salicylamide-usp",
+    "name": "Salicylamide USP",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "USP (United States Pharmacopeia)",
+    "cas": "65-45-2",
+    "description": "Amide derivative of salicylic acid used as an effective analgesic and antipyretic in combination medicines.",
+    "applications": "Analgesic powders, pain relief tablets, prescription blends"
+  },
+  {
+    "id": "sodium-methyl-paraben-ip",
+    "name": "Sodium Methyl Paraben IP",
+    "category": "Preservatives & Excipients",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "5026-62-0",
+    "description": "Water-soluble sodium salt of methylparaben enabling cold-process incorporation in aqueous solutions.",
+    "applications": "Aqueous pharmaceutical syrups, eye drops, injections"
+  },
+  {
+    "id": "sodium-propyl-paraben-ip",
+    "name": "Sodium Propyl Paraben IP",
+    "category": "Preservatives & Excipients",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "35285-69-9",
+    "description": "Water-soluble sodium salt of propylparaben ideal for high pH and liquid pharmaceutical formulations.",
+    "applications": "Liquid formulations, dental rinses, liquid suspensions"
+  },
+  {
+    "id": "sodium-salicylate-ip",
+    "name": "Sodium Salicylate IP",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "IP (Indian Pharmacopoeia)",
+    "cas": "54-21-7",
+    "description": "Sodium salt of salicylic acid offering superior water solubility for oral liquid and systemic therapies.",
+    "applications": "Analgesic syrups, diagnostic agents, antipyretics"
+  },
+  {
+    "id": "technical-sodium-salicylate",
+    "name": "Technical Sodium Salicylate",
+    "category": "Technical & Industrial Chemicals",
+    "grade": "Technical Grade",
+    "cas": "54-21-7",
+    "description": "Industrial grade sodium salicylate for chemical intermediate production and industrial corrosion inhibition.",
+    "applications": "Chemical manufacturing, metal finishing, industrial buffers"
+  },
+  {
+    "id": "zinc-picolinate",
+    "name": "Zinc Picolinate",
+    "category": "Minerals & Nutritional Supplements",
+    "grade": "Nutraceutical / Food Grade",
+    "cas": "17949-65-4",
+    "description": "Chelated zinc salt bonded with picolinic acid, known for optimal mucosal bioavailability and absorption.",
+    "applications": "Immunity boosters, nutraceutical capsules, dietary supplements"
+  },
+  {
+    "id": "vitamin-k3-feed",
+    "name": "Vitamin K3 (Menadione) Feed Grade",
+    "category": "Minerals & Nutritional Supplements",
+    "grade": "Feed Grade (MNB / MSB)",
+    "cas": "58-27-5",
+    "description": "Synthetic provitamin K essential for prothrombin synthesis in veterinary and animal nutrition formulations.",
+    "applications": "Animal feed premixes, veterinary supplements, poultry health"
+  },
+  {
+    "id": "wintergreen-oil",
+    "name": "Wintergreen Oil (Gaultheria Oil)",
+    "category": "Essential Oils & Botanicals",
+    "grade": "Natural Steam Distilled",
+    "cas": "68917-75-9",
+    "description": "Natural source of methyl salicylate extracted from Gaultheria leaves, imparting deep warming sensation.",
+    "applications": "Ayurvedic pain balms, topical rubs, liniments, massage oils"
+  }
+]
