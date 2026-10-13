@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Catalogue | Pharmaceutical Raw Materials & APIs | Mehta Associates</title>
-  <meta name="description" content="Explore verified catalogue of 38+ pharmaceutical raw materials, Active Pharmaceutical Ingredients (APIs), bulk drugs, and excipients. IP, BP, and USP standards with COA.">
-  <meta name="keywords" content="Aspirin IP, Chlorhexidine Gluconate 20%, Cetrimide IP, Menthol Bold Crystals, Benzyl Alcohol IP, APIs Mumbai, pharmaceutical raw materials catalogue">
+  <meta name="description" content="Explore verified catalogue of 38+ pharmaceutical raw materials, Active Pharmaceutical Ingredients (APIs), bulk drugs, and excipients. I P, B P, and U S P standards with COA.">
+  <meta name="keywords" content="Aspirin I P, Chlorhexidine Gluconate 20%, Cetrimide I P, Menthol Bold Crystals, Benzyl Alcohol I P, APIs Mumbai, pharmaceutical raw materials catalogue">
   <meta name="author" content="Mehta Associates">
   
   <link rel="icon" type="image/png" href="assets/images/extracted_2.jpg">
@@ -19,9 +19,9 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css?v=catalog7">
-  <link rel="stylesheet" href="css/responsive.css?v=catalog7">
-  <link rel="stylesheet" href="css/animations.css?v=catalog7">
+  <link rel="stylesheet" href="css/style.css?v=catalog10">
+  <link rel="stylesheet" href="css/responsive.css?v=catalog8">
+  <link rel="stylesheet" href="css/animations.css?v=catalog8">
 </head>
 <body>
 
@@ -42,7 +42,7 @@
       <div class="top-bar-info">
         <span class="top-bar-item">
           <i data-lucide="phone" style="width: 14px; height: 14px;"></i>
-          <span>Tel: <a href="tel:02226481103">022-2648 1103</a> / <a href="tel:02267105247">6710 5247</a></span>
+          <span>Direct Desk: <a href="tel:+919324283220">+91 93242 83220</a> / <a href="tel:+919322224602">+91 93222 24602</a></span>
         </span>
         <span class="top-bar-item">
           <i data-lucide="mail" style="width: 14px; height: 14px;"></i>
@@ -70,7 +70,7 @@
     <div class="container header-inner">
       <!-- Brand Logo (Left) -->
       <a href="index.html" class="brand-logo-wrap" title="Mehta Associates - Home">
-        <img src="assets/images/logo.png" alt="Mehta Associates - Dealers in Pharmaceuticals Raw Materials" class="brand-logo" width="250" height="50">
+        <img src="assets/images/logo.png" alt="Mehta Associates - Dealers in Pharmaceuticals Raw Materials" class="brand-logo" width="320" height="64">
       </a>
 
       <!-- Desktop Nav (Center) -->
@@ -81,9 +81,132 @@
         <a href="about.html" class="nav-link">
           <span class="nav-link-text">About Us</span>
         </a>
-        <a href="products.html" class="nav-link active">
-          <span class="nav-link-text">Products</span>
-        </a>
+        <!-- Products with Dropdown Menu -->
+        <div class="nav-item-dropdown" id="nav-products-dropdown">
+          <a href="products.html" class="nav-link active dropdown-toggle" id="products-menu-toggle" aria-expanded="false" aria-haspopup="true">
+            <span class="nav-link-text">Products</span>
+            <i data-lucide="chevron-down" class="nav-chevron-icon"></i>
+          </a>
+
+          <!-- Mega Menu Dropdown Panel -->
+          <div class="dropdown-menu-panel" role="menu" aria-labelledby="products-menu-toggle">
+            <div class="dropdown-top-accent"></div>
+            
+            <div class="dropdown-menu-header">
+              <div class="dropdown-header-title">
+                <span class="dropdown-live-pulse"></span>
+                <span>Verified Pharmacopoeial Portfolio</span>
+              </div>
+              <a href="products.html" class="dropdown-view-all-link">
+                <span>View Full 38+ Catalogue</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="dropdown-categories-grid">
+              <!-- Category 1: Active APIs -->
+              <a href="products.html?category=Active+Pharmaceutical+Ingredients+(APIs)" class="category-card" role="menuitem">
+                <div class="category-card-icon-wrap cat-icon-apis">
+                  <i data-lucide="pill"></i>
+                </div>
+                <div class="category-card-content">
+                  <div class="category-card-header">
+                    <span class="category-card-title">APIs &amp; Bulk Drugs</span>
+                    <span class="category-card-badge">16 Items</span>
+                  </div>
+                  <p class="category-card-desc">Aspirin, Ambroxol, Choline Salicylate &amp; DEC</p>
+                </div>
+                <i data-lucide="chevron-right" class="category-card-arrow"></i>
+              </a>
+
+              <!-- Category 2: Preservatives & Excipients -->
+              <a href="products.html?category=Preservatives+%26+Excipients" class="category-card" role="menuitem">
+                <div class="category-card-icon-wrap cat-icon-preservatives">
+                  <i data-lucide="shield-check"></i>
+                </div>
+                <div class="category-card-content">
+                  <div class="category-card-header">
+                    <span class="category-card-title">Preservatives &amp; Excipients</span>
+                    <span class="category-card-badge">7 Items</span>
+                  </div>
+                  <p class="category-card-desc">Benzyl Alcohol I P, Parabens, D.O.S.S BP</p>
+                </div>
+                <i data-lucide="chevron-right" class="category-card-arrow"></i>
+              </a>
+
+              <!-- Category 3: Antiseptics & Disinfectants -->
+              <a href="products.html?category=Antiseptics+%26+Disinfectants" class="category-card" role="menuitem">
+                <div class="category-card-icon-wrap cat-icon-antiseptics">
+                  <i data-lucide="sparkles"></i>
+                </div>
+                <div class="category-card-content">
+                  <div class="category-card-header">
+                    <span class="category-card-title">Antiseptics &amp; Disinfectants</span>
+                    <span class="category-card-badge">5 Items</span>
+                  </div>
+                  <p class="category-card-desc">Cetrimide I P, Chlorhexidine 20%, Iodoform</p>
+                </div>
+                <i data-lucide="chevron-right" class="category-card-arrow"></i>
+              </a>
+
+              <!-- Category 4: Minerals & Supplements -->
+              <a href="products.html?category=Minerals+%26+Nutritional+Supplements" class="category-card" role="menuitem">
+                <div class="category-card-icon-wrap cat-icon-nutra">
+                  <i data-lucide="activity"></i>
+                </div>
+                <div class="category-card-content">
+                  <div class="category-card-header">
+                    <span class="category-card-title">Nutraceuticals &amp; Minerals</span>
+                    <span class="category-card-badge">4 Items</span>
+                  </div>
+                  <p class="category-card-desc">Chromium Picolinate USP, Zinc, Vitamin K3</p>
+                </div>
+                <i data-lucide="chevron-right" class="category-card-arrow"></i>
+              </a>
+
+              <!-- Category 5: Essential Oils & Botanicals -->
+              <a href="products.html?category=Essential+Oils+%26+Botanicals" class="category-card" role="menuitem">
+                <div class="category-card-icon-wrap cat-icon-botanicals">
+                  <i data-lucide="leaf"></i>
+                </div>
+                <div class="category-card-content">
+                  <div class="category-card-header">
+                    <span class="category-card-title">Essential Oils &amp; Botanicals</span>
+                    <span class="category-card-badge">4 Items</span>
+                  </div>
+                  <p class="category-card-desc">Eucalyptus, Menthol Crystal, Wintergreen</p>
+                </div>
+                <i data-lucide="chevron-right" class="category-card-arrow"></i>
+              </a>
+
+              <!-- Category 6: Technical & Industrial Chemicals -->
+              <a href="products.html?category=Technical+%26+Industrial+Chemicals" class="category-card" role="menuitem">
+                <div class="category-card-icon-wrap cat-icon-industrial">
+                  <i data-lucide="beaker"></i>
+                </div>
+                <div class="category-card-content">
+                  <div class="category-card-header">
+                    <span class="category-card-title">Speciality &amp; Industrial</span>
+                    <span class="category-card-badge">2 Items</span>
+                  </div>
+                  <p class="category-card-desc">Technical Salicylic Acid, Solvents &amp; Reagents</p>
+                </div>
+                <i data-lucide="chevron-right" class="category-card-arrow"></i>
+              </a>
+            </div>
+
+            <div class="dropdown-menu-footer">
+              <div class="dropdown-footer-info">
+                <i data-lucide="check-circle-2"></i>
+                <span>Guaranteed <strong>I P &bull; B P &bull; U S P &bull; EP</strong> Grades with COA</span>
+              </div>
+              <a href="documents/company-brochure.pdf" target="_blank" rel="noopener noreferrer" class="dropdown-footer-cta" data-analytics-brochure="view">
+                <span>Download Brochure</span>
+                <i data-lucide="download"></i>
+              </a>
+            </div>
+          </div>
+        </div>
         <a href="documents/company-brochure.pdf" target="_blank" rel="noopener noreferrer" class="nav-link" data-analytics-brochure="view">
           <span class="nav-link-text">Company Brochure</span>
           <i data-lucide="arrow-up-right" class="nav-link-external-icon"></i>
@@ -126,12 +249,71 @@
   <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Menu">
     <div>
       <div style="margin-bottom: 2rem;">
-        <img src="assets/images/logo.png" alt="Mehta Associates" style="height: 42px; width: auto;">
+        <img src="assets/images/logo.png" alt="Mehta Associates" style="height: 52px; width: auto;">
       </div>
       <nav class="mobile-nav-links">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About Us</a>
-        <a href="products.html" class="nav-link active">Products</a>
+        <!-- Products with Accordion Submenu -->
+        <div class="mobile-nav-item-dropdown">
+          <div class="mobile-nav-item-header">
+            <a href="products.html" class="nav-link active">Products</a>
+            <button type="button" class="mobile-submenu-toggle" aria-label="Toggle products category submenu" aria-expanded="false">
+              <i data-lucide="chevron-down"></i>
+            </button>
+          </div>
+          <div class="mobile-submenu">
+            <a href="products.html" class="mobile-submenu-link">
+              <span class="mobile-submenu-link-main">
+                <i data-lucide="layers" class="mobile-sub-icon"></i>
+                <span>All Products</span>
+              </span>
+              <span class="mobile-submenu-badge">38</span>
+            </a>
+            <a href="products.html?category=Active+Pharmaceutical+Ingredients+(APIs)" class="mobile-submenu-link">
+              <span class="mobile-submenu-link-main">
+                <i data-lucide="pill" class="mobile-sub-icon"></i>
+                <span>APIs &amp; Bulk Drugs</span>
+              </span>
+              <span class="mobile-submenu-badge">16</span>
+            </a>
+            <a href="products.html?category=Preservatives+%26+Excipients" class="mobile-submenu-link">
+              <span class="mobile-submenu-link-main">
+                <i data-lucide="shield-check" class="mobile-sub-icon"></i>
+                <span>Preservatives &amp; Excipients</span>
+              </span>
+              <span class="mobile-submenu-badge">7</span>
+            </a>
+            <a href="products.html?category=Antiseptics+%26+Disinfectants" class="mobile-submenu-link">
+              <span class="mobile-submenu-link-main">
+                <i data-lucide="sparkles" class="mobile-sub-icon"></i>
+                <span>Antiseptics &amp; Disinfectants</span>
+              </span>
+              <span class="mobile-submenu-badge">5</span>
+            </a>
+            <a href="products.html?category=Minerals+%26+Nutritional+Supplements" class="mobile-submenu-link">
+              <span class="mobile-submenu-link-main">
+                <i data-lucide="activity" class="mobile-sub-icon"></i>
+                <span>Nutraceuticals &amp; Minerals</span>
+              </span>
+              <span class="mobile-submenu-badge">4</span>
+            </a>
+            <a href="products.html?category=Essential+Oils+%26+Botanicals" class="mobile-submenu-link">
+              <span class="mobile-submenu-link-main">
+                <i data-lucide="leaf" class="mobile-sub-icon"></i>
+                <span>Essential Oils &amp; Botanicals</span>
+              </span>
+              <span class="mobile-submenu-badge">4</span>
+            </a>
+            <a href="products.html?category=Technical+%26+Industrial+Chemicals" class="mobile-submenu-link">
+              <span class="mobile-submenu-link-main">
+                <i data-lucide="beaker" class="mobile-sub-icon"></i>
+                <span>Speciality &amp; Industrial</span>
+              </span>
+              <span class="mobile-submenu-badge">2</span>
+            </a>
+          </div>
+        </div>
         <a href="documents/company-brochure.pdf" target="_blank" rel="noopener noreferrer" class="nav-link" data-analytics-brochure="view">Company Brochure</a>
         <a href="contact.html" class="nav-link">Contact Us</a>
       </nav>
@@ -147,18 +329,18 @@
   </aside>
 
   <!-- Page Banner -->
-  <div style="background-color: var(--color-black-surface); color: #FFFFFF; padding: 3.5rem 0 3rem; border-bottom: 3px solid var(--color-primary);">
+  <div class="page-banner">
     <div class="container">
-      <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; color: #EF4444; margin-bottom: 0.75rem;">
-        <a href="index.html" style="color: rgba(255, 255, 255, 0.7);">Home</a>
-        <span style="color: rgba(255, 255, 255, 0.4);">/</span>
-        <span style="color: #FFFFFF; font-weight: 600;">Product Directory</span>
+      <div class="page-banner-breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="page-banner-sep">/</span>
+        <span class="page-banner-current">Product Directory</span>
       </div>
-      <h1 style="color: #FFFFFF; font-size: clamp(2rem, 3.5vw, 2.75rem); margin-bottom: 0.75rem;">
+      <h1 class="page-banner-title">
         Pharmaceutical Raw Materials &amp; Chemicals Directory
       </h1>
-      <p style="color: rgba(255, 255, 255, 0.85); max-width: 680px; font-size: 1.05rem; margin: 0;">
-        Full catalog of verified Active Pharmaceutical Ingredients (APIs), antiseptic solutions, excipients, and essential oils adhering to IP, BP, and USP standards.
+      <p class="page-banner-subtitle">
+        Verified directory of 38+ Active Pharmaceutical Ingredients (APIs), excipients, antiseptics, and essential chemical compounds adhering to I P, B P, and U S P standards.
       </p>
     </div>
   </div>
@@ -166,29 +348,38 @@
   <!-- Main Catalogue Content -->
   <main class="section section-alt">
     <div class="container">
-      <!-- Search & Filter Controls -->
-      <div class="catalogue-controls" style="margin-bottom: 3rem;">
-        <div class="search-bar-wrap">
-          <i data-lucide="search" class="search-icon" style="width: 20px; height: 20px;"></i>
-          <input type="text" id="product-search-input" class="search-input" placeholder="Search by chemical name, standard (IP/BP/USP), CAS, or application..." aria-label="Search all products">
-          <span id="search-clear-btn" class="search-clear-btn" title="Clear search">
-            <i data-lucide="x" style="width: 18px; height: 18px;"></i>
-          </span>
-        </div>
-
-        <!-- Category Tabs -->
-        <div class="category-tabs" id="category-tabs">
-          <!-- Populated dynamically by js/products.js -->
-        </div>
-
-        <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid var(--color-border);">
-          <span id="product-count-display" style="font-size: 0.9375rem; color: var(--color-secondary); font-weight: 600;">
-            Loading products...
-          </span>
-          <a href="documents/company-brochure.pdf" download="Mehta-Associates-Brochure.pdf" class="btn btn-secondary btn-sm" data-analytics-brochure="download">
-            <i data-lucide="download" style="width: 14px; height: 14px;"></i>
-            <span>Download PDF Catalogue</span>
+      <!-- Catalogue Controls (Clean, Unified Filter Bar) -->
+      <div class="catalogue-toolbar">
+        <div class="catalogue-search-row">
+          <div class="search-bar-wrap">
+            <i data-lucide="search" class="search-icon"></i>
+            <input type="text" id="product-search-input" class="search-input" placeholder="Search by chemical name, grade (I P / B P / U S P), CAS number, or application..." aria-label="Search all products">
+            <span id="search-clear-btn" class="search-clear-btn" title="Clear search">
+              <i data-lucide="x" style="width: 16px; height: 16px;"></i>
+            </span>
+          </div>
+          <a href="documents/company-brochure.pdf" download="Mehta-Associates-Brochure.pdf" class="btn-download-catalog" data-analytics-brochure="download" title="Download Complete Product Catalogue PDF">
+            <i data-lucide="download"></i>
+            <span>PDF Catalogue</span>
           </a>
+        </div>
+
+        <!-- Category Filter Strip -->
+        <div class="category-tabs-wrap">
+          <div class="category-tabs" id="category-tabs" role="tablist" aria-label="Filter by chemical category">
+            <!-- Populated dynamically by js/products.js -->
+          </div>
+        </div>
+
+        <!-- Status & Results Bar -->
+        <div class="catalogue-meta-bar">
+          <div class="catalogue-count-info">
+            <span class="catalogue-live-dot"></span>
+            <span id="product-count-display">Loading verified products...</span>
+          </div>
+          <div class="catalogue-standards-hint">
+            <span>Standards: <strong>I P &bull; B P &bull; U S P &bull; EP</strong> with Batch COA Documentation</span>
+          </div>
         </div>
       </div>
 
@@ -197,19 +388,23 @@
         <!-- Rendered dynamically by js/products.js -->
       </div>
 
-      <!-- Custom Sourcing Banner -->
-      <div style="margin-top: 4.5rem; background-color: #FFFFFF; border-radius: var(--radius-lg); border: 1.5px dashed var(--color-accent); padding: 2.75rem 2.5rem; text-align: center; box-shadow: var(--shadow-sm);">
-        <h3 style="font-size: 1.5rem; margin-bottom: 0.65rem;">Looking for an API or Chemical not listed above?</h3>
-        <p style="max-width: 640px; margin: 0 auto 1.5rem; color: var(--color-text-muted);">
-          With our 41 years of domestic manufacturer relationships, we actively procure specialized bulk drugs, custom salts, and industrial chemical grades on indent basis.
+      <!-- Executive Custom Sourcing Banner -->
+      <div class="product-custom-sourcing-banner reveal-on-scroll">
+        <div class="sourcing-banner-badge">
+          <i data-lucide="layers"></i>
+          <span>Custom Indenting &amp; Sourcing Desk</span>
+        </div>
+        <h3>Looking for an API or Chemical Not Listed Above?</h3>
+        <p>
+          Leveraging 41 years of direct relationships with India’s leading primary manufacturers and global trade alliances, we source specialized bulk drugs, custom salts, pharmacopoeial grades, and indent chemicals.
         </p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <div class="sourcing-banner-actions">
           <button type="button" class="btn btn-primary" onclick="openEnquiryModal('Custom Chemical Sourcing Indent')">
             <i data-lucide="file-question" style="width: 16px; height: 16px;"></i>
             <span>Request Custom Sourcing</span>
           </button>
-          <a href="https://wa.me/919324283220?text=Hello%20Mehta%20Associates%2C%20I%20have%20a%20custom%20pharmaceutical%20chemical%20enquiry" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="border-color: #C8102E; color: #C8102E;" data-analytics-wa="Kamlesh Mehta">
-            <i data-lucide="message-circle" style="width: 16px; height: 16px; color: #C8102E;"></i>
+          <a href="https://wa.me/919324283220?text=Hello%20Mehta%20Associates%2C%20I%20have%20a%20custom%20pharmaceutical%20chemical%20enquiry" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="border-color: #25D366; color: #FFFFFF; background-color: #25D366; display: inline-flex; align-items: center; gap: 0.5rem;" data-analytics-wa="Kamlesh Mehta">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true" style="flex-shrink: 0;"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2ZM12.04 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.66 20.16 9.3 19.8 8.1 19.09L7.81 18.92L4.69 19.74L5.52 16.7L5.33 16.39C4.55 15.16 4.13 13.56 4.13 11.91C4.13 7.37 7.83 3.67 12.04 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.7C7.02 10.92 7.91 12.09 8.03 12.25C8.16 12.41 9.77 14.9 12.24 15.97C12.83 16.22 13.28 16.37 13.64 16.49C14.23 16.67 14.78 16.65 15.21 16.58C15.69 16.51 16.68 15.98 16.89 15.4C17.09 14.81 17.09 14.31 17.03 14.21C16.97 14.1 16.81 14.04 16.56 13.92C16.32 13.79 15.11 13.2 14.88 13.12C14.66 13.03 14.5 12.99 14.33 13.24C14.17 13.48 13.71 14.04 13.57 14.21C13.43 14.37 13.29 14.39 13.04 14.27C12.8 14.14 12.01 13.89 11.08 13.06C10.36 12.41 9.87 11.61 9.73 11.37C9.59 11.12 9.71 10.99 9.84 10.86C9.95 10.75 10.08 10.57 10.21 10.42C10.33 10.28 10.37 10.17 10.45 10.01C10.54 9.84 10.49 9.7 10.43 9.58C10.37 9.45 9.9 8.31 9.71 7.84C9.52 7.39 9.33 7.45 9.18 7.44C9.05 7.43 8.89 7.43 8.73 7.43C8.57 7.43 8.53 7.33 8.53 7.33Z"/></svg>
             <span>Inquire on WhatsApp</span>
           </a>
         </div>
@@ -234,17 +429,17 @@
 
           <blockquote class="footer-founder-quote">
             <p>&ldquo;Quantity is Must, <strong>But Quality is First</strong>&rdquo;</p>
-            <cite>&mdash; Late Shri Shashikant C. Mehta, Founder</cite>
+            <cite>&mdash; Late Shri Shashikant C Mehta, Founder</cite>
           </blockquote>
 
           <p class="footer-about-text">
-            Leading dealer in pharmaceutical raw materials, Active Pharmaceutical Ingredients (APIs), bulk drugs, and specialty chemicals in Mumbai since 1985. Supplying 1,500+ licensed pharma facilities nationwide.
+            Leading dealer in pharmaceutical raw materials, Active Pharmaceutical Ingredients (APIs), bulk drugs, and specialty chemicals in Mumbai since 1985. Supplying 1,500+ Customers nationwide.
           </p>
 
           <div class="footer-trust-strip">
             <span class="footer-trust-item"><i data-lucide="check" style="width:13px;height:13px;"></i> 100% Batch COA</span>
             <span class="footer-trust-item"><i data-lucide="check" style="width:13px;height:13px;"></i> Licensed Sourcing</span>
-            <span class="footer-trust-item"><i data-lucide="check" style="width:13px;height:13px;"></i> 1,500+ Pharms Supplied</span>
+            <span class="footer-trust-item"><i data-lucide="check" style="width:13px;height:13px;"></i> 1,500+ Customers</span>
           </div>
         </div>
 
@@ -302,17 +497,13 @@
 
           <!-- Contact Channels (Clean Minimal Links) -->
           <div class="footer-contact-list">
-            <a href="tel:+912226481103" class="footer-contact-link" title="Call Mumbai Sales Desk">
-              <i data-lucide="phone" style="width: 13px; height: 13px;"></i>
-              <span>022-2648 1103 / 6710 5247</span>
-            </a>
             <a href="mailto:sales@mehtaassociates.co.in" class="footer-contact-link" title="Email Official Inquiries">
               <i data-lucide="mail" style="width: 13px; height: 13px;"></i>
               <span>sales@mehtaassociates.co.in</span>
             </a>
             <a href="https://wa.me/919324283220?text=Hello%2C%20I%20am%20enquiring%20about%20pharmaceutical%20raw%20materials" target="_blank" rel="noopener noreferrer" class="footer-contact-link footer-contact-wa" title="WhatsApp Partner Kamlesh Mehta">
-              <i data-lucide="message-circle" style="width: 13px; height: 13px;"></i>
-              <span>+91 93242 83220 <span class="footer-contact-sub">(Kamlesh Mehta)</span></span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="#25D366" aria-hidden="true" style="flex-shrink: 0;"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2ZM12.04 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.66 20.16 9.3 19.8 8.1 19.09L7.81 18.92L4.69 19.74L5.52 16.7L5.33 16.39C4.55 15.16 4.13 13.56 4.13 11.91C4.13 7.37 7.83 3.67 12.04 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.7C7.02 10.92 7.91 12.09 8.03 12.25C8.16 12.41 9.77 14.9 12.24 15.97C12.83 16.22 13.28 16.37 13.64 16.49C14.23 16.67 14.78 16.65 15.21 16.58C15.69 16.51 16.68 15.98 16.89 15.4C17.09 14.81 17.09 14.31 17.03 14.21C16.97 14.1 16.81 14.04 16.56 13.92C16.32 13.79 15.11 13.2 14.88 13.12C14.66 13.03 14.5 12.99 14.33 13.24C14.17 13.48 13.71 14.04 13.57 14.21C13.43 14.37 13.29 14.39 13.04 14.27C12.8 14.14 12.01 13.89 11.08 13.06C10.36 12.41 9.87 11.61 9.73 11.37C9.59 11.12 9.71 10.99 9.84 10.86C9.95 10.75 10.08 10.57 10.21 10.42C10.33 10.28 10.37 10.17 10.45 10.01C10.54 9.84 10.49 9.7 10.43 9.58C10.37 9.45 9.9 8.31 9.71 7.84C9.52 7.39 9.33 7.45 9.18 7.44C9.05 7.43 8.89 7.43 8.73 7.43C8.57 7.43 8.53 7.33 8.53 7.33Z"/></svg>
+              <span>+91 93242 83220 <span class="footer-contact-sub">(Kamlesh S Mehta)</span></span>
             </a>
           </div>
 
@@ -330,7 +521,7 @@
 
           <!-- Compliance Badges (Clean Minimal Row) -->
           <div class="footer-compliance-row">
-            <span class="footer-compliance-item"><i data-lucide="shield-check" style="width:12px;height:12px;"></i> IP / BP / USP</span>
+            <span class="footer-compliance-item"><i data-lucide="shield-check" style="width:12px;height:12px;"></i> I P / B P / U S P</span>
             <span class="footer-compliance-sep">&bull;</span>
             <span class="footer-compliance-item"><i data-lucide="award" style="width:12px;height:12px;"></i> 41+ Years</span>
             <span class="footer-compliance-sep">&bull;</span>
@@ -367,29 +558,40 @@
     <div class="whatsapp-popup">
       <div class="whatsapp-popup-header">
         <span class="whatsapp-close-btn" title="Close"><i data-lucide="x" style="width: 16px; height: 16px;"></i></span>
-        <h5>Chat with Mehta Associates</h5>
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="#25D366" aria-hidden="true" style="flex-shrink: 0;"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2ZM12.04 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.66 20.16 9.3 19.8 8.1 19.09L7.81 18.92L4.69 19.74L5.52 16.7L5.33 16.39C4.55 15.16 4.13 13.56 4.13 11.91C4.13 7.37 7.83 3.67 12.04 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.7C7.02 10.92 7.91 12.09 8.03 12.25C8.16 12.41 9.77 14.9 12.24 15.97C12.83 16.22 13.28 16.37 13.64 16.49C14.23 16.67 14.78 16.65 15.21 16.58C15.69 16.51 16.68 15.98 16.89 15.4C17.09 14.81 17.09 14.31 17.03 14.21C16.97 14.1 16.81 14.04 16.56 13.92C16.32 13.79 15.11 13.2 14.88 13.12C14.66 13.03 14.5 12.99 14.33 13.24C14.17 13.48 13.71 14.04 13.57 14.21C13.43 14.37 13.29 14.39 13.04 14.27C12.8 14.14 12.01 13.89 11.08 13.06C10.36 12.41 9.87 11.61 9.73 11.37C9.59 11.12 9.71 10.99 9.84 10.86C9.95 10.75 10.08 10.57 10.21 10.42C10.33 10.28 10.37 10.17 10.45 10.01C10.54 9.84 10.49 9.7 10.43 9.58C10.37 9.45 9.9 8.31 9.71 7.84C9.52 7.39 9.33 7.45 9.18 7.44C9.05 7.43 8.89 7.43 8.73 7.43C8.57 7.43 8.53 7.33 8.53 7.33Z"/></svg>
+          <h5 style="margin: 0; color: #FFFFFF; font-size: 0.95rem;">Chat with Mehta Associates</h5>
+        </div>
         <p>Direct WhatsApp support with company partners</p>
       </div>
       <div class="whatsapp-popup-body">
         <a href="https://wa.me/919324283220?text=Hello%20Mr.%20Kamlesh%2C%20I%20am%20enquiring%20about%20products" target="_blank" rel="noopener noreferrer" class="whatsapp-partner-btn" data-analytics-wa="Kamlesh Mehta">
           <div class="partner-btn-avatar">KM</div>
           <div class="partner-btn-text">
-            <h6>Mr. Kamlesh S. Mehta</h6>
+            <h6>Mr. Kamlesh S Mehta</h6>
             <span>Partner &bull; +91 93242 83220</span>
           </div>
+          <span class="partner-wa-indicator" title="Available on WhatsApp">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="#25D366"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2ZM12.04 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.66 20.16 9.3 19.8 8.1 19.09L7.81 18.92L4.69 19.74L5.52 16.7L5.33 16.39C4.55 15.16 4.13 13.56 4.13 11.91C4.13 7.37 7.83 3.67 12.04 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.7C7.02 10.92 7.91 12.09 8.03 12.25C8.16 12.41 9.77 14.9 12.24 15.97C12.83 16.22 13.28 16.37 13.64 16.49C14.23 16.67 14.78 16.65 15.21 16.58C15.69 16.51 16.68 15.98 16.89 15.4C17.09 14.81 17.09 14.31 17.03 14.21C16.97 14.1 16.81 14.04 16.56 13.92C16.32 13.79 15.11 13.2 14.88 13.12C14.66 13.03 14.5 12.99 14.33 13.24C14.17 13.48 13.71 14.04 13.57 14.21C13.43 14.37 13.29 14.39 13.04 14.27C12.8 14.14 12.01 13.89 11.08 13.06C10.36 12.41 9.87 11.61 9.73 11.37C9.59 11.12 9.71 10.99 9.84 10.86C9.95 10.75 10.08 10.57 10.21 10.42C10.33 10.28 10.37 10.17 10.45 10.01C10.54 9.84 10.49 9.7 10.43 9.58C10.37 9.45 9.9 8.31 9.71 7.84C9.52 7.39 9.33 7.45 9.18 7.44C9.05 7.43 8.89 7.43 8.73 7.43C8.57 7.43 8.53 7.33 8.53 7.33Z"/></svg>
+          </span>
         </a>
         <a href="https://wa.me/919322224602?text=Hello%20Mr.%20Dakshesh%2C%20I%20am%20enquiring%20about%20products" target="_blank" rel="noopener noreferrer" class="whatsapp-partner-btn" data-analytics-wa="Dakshesh Mehta">
           <div class="partner-btn-avatar">DM</div>
           <div class="partner-btn-text">
-            <h6>Mr. Dakshesh S. Mehta</h6>
+            <h6>Mr. Dakshesh S Mehta</h6>
             <span>Partner &bull; +91 93222 24602</span>
           </div>
+          <span class="partner-wa-indicator" title="Available on WhatsApp">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="#25D366"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2ZM12.04 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.66 20.16 9.3 19.8 8.1 19.09L7.81 18.92L4.69 19.74L5.52 16.7L5.33 16.39C4.55 15.16 4.13 13.56 4.13 11.91C4.13 7.37 7.83 3.67 12.04 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.7C7.02 10.92 7.91 12.09 8.03 12.25C8.16 12.41 9.77 14.9 12.24 15.97C12.83 16.22 13.28 16.37 13.64 16.49C14.23 16.67 14.78 16.65 15.21 16.58C15.69 16.51 16.68 15.98 16.89 15.4C17.09 14.81 17.09 14.31 17.03 14.21C16.97 14.1 16.81 14.04 16.56 13.92C16.32 13.79 15.11 13.2 14.88 13.12C14.66 13.03 14.5 12.99 14.33 13.24C14.17 13.48 13.71 14.04 13.57 14.21C13.43 14.37 13.29 14.39 13.04 14.27C12.8 14.14 12.01 13.89 11.08 13.06C10.36 12.41 9.87 11.61 9.73 11.37C9.59 11.12 9.71 10.99 9.84 10.86C9.95 10.75 10.08 10.57 10.21 10.42C10.33 10.28 10.37 10.17 10.45 10.01C10.54 9.84 10.49 9.7 10.43 9.58C10.37 9.45 9.9 8.31 9.71 7.84C9.52 7.39 9.33 7.45 9.18 7.44C9.05 7.43 8.89 7.43 8.73 7.43C8.57 7.43 8.53 7.33 8.53 7.33Z"/></svg>
+          </span>
         </a>
       </div>
     </div>
 
     <button type="button" class="whatsapp-trigger-btn" aria-label="Open WhatsApp conversation options" title="Chat with Us on WhatsApp">
-      <i data-lucide="message-circle" style="width: 28px; height: 28px;"></i>
+      <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2ZM12.04 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.66 20.16 9.3 19.8 8.1 19.09L7.81 18.92L4.69 19.74L5.52 16.7L5.33 16.39C4.55 15.16 4.13 13.56 4.13 11.91C4.13 7.37 7.83 3.67 12.04 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.7C7.02 10.92 7.91 12.09 8.03 12.25C8.16 12.41 9.77 14.9 12.24 15.97C12.83 16.22 13.28 16.37 13.64 16.49C14.23 16.67 14.78 16.65 15.21 16.58C15.69 16.51 16.68 15.98 16.89 15.4C17.09 14.81 17.09 14.31 17.03 14.21C16.97 14.1 16.81 14.04 16.56 13.92C16.32 13.79 15.11 13.2 14.88 13.12C14.66 13.03 14.5 12.99 14.33 13.24C14.17 13.48 13.71 14.04 13.57 14.21C13.43 14.37 13.29 14.39 13.04 14.27C12.8 14.14 12.01 13.89 11.08 13.06C10.36 12.41 9.87 11.61 9.73 11.37C9.59 11.12 9.71 10.99 9.84 10.86C9.95 10.75 10.08 10.57 10.21 10.42C10.33 10.28 10.37 10.17 10.45 10.01C10.54 9.84 10.49 9.7 10.43 9.58C10.37 9.45 9.9 8.31 9.71 7.84C9.52 7.39 9.33 7.45 9.18 7.44C9.05 7.43 8.89 7.43 8.73 7.43C8.57 7.43 8.53 7.33 8.53 7.33Z"/>
+      </svg>
     </button>
   </div>
 
@@ -442,7 +644,10 @@
 
           <div style="display: flex; gap: 0.75rem; margin-top: 1rem;">
             <button type="submit" class="btn btn-primary" style="flex: 1;">Submit Enquiry</button>
-            <button type="button" class="btn btn-secondary btn-submit-whatsapp" style="border-color: #C8102E; color: #C8102E;">WhatsApp</button>
+            <button type="button" class="btn btn-secondary btn-submit-whatsapp" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2ZM12.04 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.66 20.16 9.3 19.8 8.1 19.09L7.81 18.92L4.69 19.74L5.52 16.7L5.33 16.39C4.55 15.16 4.13 13.56 4.13 11.91C4.13 7.37 7.83 3.67 12.04 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.7C7.02 10.92 7.91 12.09 8.03 12.25C8.16 12.41 9.77 14.9 12.24 15.97C12.83 16.22 13.28 16.37 13.64 16.49C14.23 16.67 14.78 16.65 15.21 16.58C15.69 16.51 16.68 15.98 16.89 15.4C17.09 14.81 17.09 14.31 17.03 14.21C16.97 14.1 16.81 14.04 16.56 13.92C16.32 13.79 15.11 13.2 14.88 13.12C14.66 13.03 14.5 12.99 14.33 13.24C14.17 13.48 13.71 14.04 13.57 14.21C13.43 14.37 13.29 14.39 13.04 14.27C12.8 14.14 12.01 13.89 11.08 13.06C10.36 12.41 9.87 11.61 9.73 11.37C9.59 11.12 9.71 10.99 9.84 10.86C9.95 10.75 10.08 10.57 10.21 10.42C10.33 10.28 10.37 10.17 10.45 10.01C10.54 9.84 10.49 9.7 10.43 9.58C10.37 9.45 9.9 8.31 9.71 7.84C9.52 7.39 9.33 7.45 9.18 7.44C9.05 7.43 8.89 7.43 8.73 7.43C8.57 7.43 8.53 7.33 8.53 7.33Z"/></svg>
+              <span>WhatsApp</span>
+            </button>
           </div>
         </form>
       </div>
@@ -451,8 +656,8 @@
 
   <!-- Scripts -->
   <script src="js/analytics.js"></script>
-  <script src="js/main.js?v=catalog7"></script>
-  <script src="js/products.js?v=catalog7"></script>
+  <script src="js/main.js?v=catalog8"></script>
+  <script src="js/products.js?v=catalog8"></script>
   <script src="js/enquiry.js"></script>
   <script>
     lucide.createIcons();

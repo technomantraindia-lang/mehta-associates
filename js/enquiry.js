@@ -9,7 +9,7 @@
   'use strict';
 
   const CLIENT_EMAIL = 'sales@mehtaassociates.co.in';
-  const PARTNER_WHATSAPP = '919324283220'; // Mr. Kamlesh S. Mehta
+  const PARTNER_WHATSAPP = '919324283220'; // Mr. Kairav Kamlesh Mehta
 
   function validateField(input, errorElement, validationFn, errorMessage) {
     const val = input.value.trim();

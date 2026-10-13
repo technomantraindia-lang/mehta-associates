@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'Fine Chemicals',
       'Essential Oils',
       'Technical Grades',
-      'IP • BP • USP'
+      'I P • B P • U S P'
     ];
     let currentWordIndex = 0;
 
@@ -73,10 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (topTickerEl) {
     const highlights = [
       'Celebrating 41 Years of Sourcing Excellence (Est. 1985)',
-      'Guaranteed IP • BP • USP Pharmacopoeia Standards',
+      'Guaranteed I P • B P • U S P Pharmacopoeia Standards',
       'Motto: "Quantity is Must, But Quality is First"',
       'Direct Manufacturer Indenting & Mumbai Logistics',
-      'Trusted Partner to 1,500+ Domestic Accounts'
+      'Trusted Partner to 1,500+ Customers'
     ];
     let highlightIndex = 0;
 
@@ -125,7 +125,21 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       const activeSlideEl = slides[currentSlide];
+      const heroSection = document.getElementById('hero');
+      const sealShowcase = document.getElementById('hero-seal-showcase');
+
       if (activeSlideEl) {
+        const isBanner = activeSlideEl.dataset.type === 'banner';
+        const isSeal = activeSlideEl.dataset.type === 'seal';
+
+        if (heroSection) {
+          heroSection.classList.toggle('is-banner-mode', isBanner);
+        }
+
+        if (sealShowcase) {
+          sealShowcase.classList.toggle('active', isSeal);
+        }
+
         if (dynamicTag && activeSlideEl.dataset.tag) {
           dynamicTag.innerHTML = activeSlideEl.dataset.tag;
         }
@@ -259,8 +273,74 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Close mobile nav on link click or ESC
-  document.querySelectorAll('.mobile-nav-links .nav-link').forEach(link => {
+  document.querySelectorAll('.mobile-nav-links .nav-link, .mobile-submenu-link').forEach(link => {
     link.addEventListener('click', closeMobileNav);
+  });
+
+  // Mobile submenu accordion
+  const mobileSubmenuToggle = document.querySelector('.mobile-submenu-toggle');
+  const mobileSubmenu = document.querySelector('.mobile-submenu');
+  if (mobileSubmenuToggle && mobileSubmenu) {
+    mobileSubmenuToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = mobileSubmenu.classList.toggle('open');
+      mobileSubmenuToggle.classList.toggle('open', isOpen);
+      mobileSubmenuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+
+  // Desktop dropdown hover buffer and click controller
+  const navDropdowns = document.querySelectorAll('.nav-item-dropdown');
+  navDropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    const panel = dropdown.querySelector('.dropdown-menu-panel');
+    let closeTimer = null;
+
+    const openDropdown = () => {
+      if (closeTimer) {
+        clearTimeout(closeTimer);
+        closeTimer = null;
+      }
+      dropdown.classList.add('is-open');
+      if (toggle) toggle.setAttribute('aria-expanded', 'true');
+    };
+
+    const scheduleClose = () => {
+      if (closeTimer) clearTimeout(closeTimer);
+      // 300ms grace buffer ensures moving cursor down into the menu never loses hover
+      closeTimer = setTimeout(() => {
+        dropdown.classList.remove('is-open');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      }, 300);
+    };
+
+    dropdown.addEventListener('mouseenter', openDropdown);
+    dropdown.addEventListener('mouseleave', scheduleClose);
+
+    if (panel) {
+      panel.addEventListener('mouseenter', openDropdown);
+      panel.addEventListener('mouseleave', scheduleClose);
+    }
+
+    if (toggle) {
+      toggle.addEventListener('click', (e) => {
+        if (!dropdown.classList.contains('is-open')) {
+          e.preventDefault();
+          openDropdown();
+        }
+      });
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    navDropdowns.forEach(dropdown => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('is-open');
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
   });
 
   window.addEventListener('keydown', (e) => {
@@ -268,6 +348,11 @@ document.addEventListener('DOMContentLoaded', () => {
       closeMobileNav();
       closeModal();
       closeWhatsAppPopup();
+      navDropdowns.forEach(dropdown => {
+        dropdown.classList.remove('is-open');
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      });
     }
   });
 
@@ -444,6 +529,181 @@ document.addEventListener('DOMContentLoaded', () => {
         top: 0,
         behavior: 'smooth'
       });
+    });
+  }
+
+  // -------------------------------------------------------------------------
+  // Home Page Direct Product Search Controller
+  // -------------------------------------------------------------------------
+  const homeSearchInput = document.getElementById('home-direct-search');
+  const homeSearchDropdown = document.getElementById('home-search-dropdown');
+  const homeSearchResultsList = document.getElementById('home-search-results-list');
+  const homeSearchResultsCount = document.getElementById('search-results-count');
+  const homeSearchClearBtn = document.getElementById('home-search-clear-btn');
+  const homeSearchSubmitBtn = document.getElementById('home-search-submit-btn');
+  const viewAllResultsLink = document.getElementById('view-all-results-link');
+  const searchChips = document.querySelectorAll('.search-tag-chip');
+
+  if (homeSearchInput) {
+    let allHomeProducts = [];
+    let homeSearchDebounce = null;
+
+    // Fetch products catalogue for instant search
+    fetch('data/products.json')
+      .then(res => res.json())
+      .then(data => {
+        allHomeProducts = data;
+      })
+      .catch(err => {
+        console.warn('Could not pre-fetch products for home search:', err);
+      });
+
+    const normTerm = s => (s || '').toLowerCase().replace(/\bi\s*p\b/g, 'i p');
+
+    function performHomeSearch(query) {
+      const rawQuery = (query || '').trim();
+      if (!rawQuery) {
+        if (homeSearchDropdown) homeSearchDropdown.style.display = 'none';
+        if (homeSearchClearBtn) homeSearchClearBtn.style.display = 'none';
+        return;
+      }
+
+      if (homeSearchClearBtn) homeSearchClearBtn.style.display = 'flex';
+
+      const queryTokens = normTerm(rawQuery).split(/\s+/).filter(Boolean);
+      const consolidatedTokens = [];
+      for (let i = 0; i < queryTokens.length; i++) {
+        if (queryTokens[i] === 'i' && queryTokens[i + 1] === 'p') {
+          consolidatedTokens.push('i p');
+          i++;
+        } else {
+          consolidatedTokens.push(queryTokens[i]);
+        }
+      }
+
+      const matches = allHomeProducts.filter(item => {
+        const itemText = normTerm(`${item.name} ${item.description || ''} ${item.grade || ''} ${item.cas || ''} ${item.applications || ''}`);
+        return consolidatedTokens.every(token => itemText.includes(token));
+      });
+
+      renderDropdownResults(matches, rawQuery);
+    }
+
+    function escapeHtmlSimple(str) {
+      if (!str) return '';
+      return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function renderDropdownResults(matches, rawQuery) {
+      if (!homeSearchDropdown || !homeSearchResultsList) return;
+
+      if (homeSearchResultsCount) {
+        homeSearchResultsCount.textContent = `${matches.length} Product${matches.length === 1 ? '' : 's'} Found`;
+      }
+      if (viewAllResultsLink) {
+        viewAllResultsLink.href = `products.html?search=${encodeURIComponent(rawQuery)}`;
+      }
+
+      if (matches.length === 0) {
+        homeSearchResultsList.innerHTML = `
+          <div class="dropdown-empty">
+            <p>No products matching "<strong>${escapeHtmlSimple(rawQuery)}</strong>"</p>
+            <p style="font-size: 0.8125rem; margin-top: 0.35rem; color: #94A3B8;">Try searching generic chemical name, CAS number, or pharmacopoeia standard (I P / B P / U S P).</p>
+          </div>
+        `;
+      } else {
+        const topResults = matches.slice(0, 7);
+        homeSearchResultsList.innerHTML = topResults.map(p => {
+          const imgUrl = p.image || 'assets/images/products/bulk-api-powder.jpg';
+          const isIP = (p.grade || '').includes('I P') || (p.name || '').includes('I P');
+          return `
+            <a href="product-detail.html?id=${encodeURIComponent(p.id)}" class="dropdown-item">
+              <img src="${imgUrl}" alt="${escapeHtmlSimple(p.name)}" class="dropdown-item-thumb" onerror="this.src='assets/images/products/bulk-api-powder.jpg'">
+              <div class="dropdown-item-info">
+                <div class="dropdown-item-name">${escapeHtmlSimple(p.name)}</div>
+                <div class="dropdown-item-meta">
+                  <span class="dropdown-item-badge ${isIP ? 'grade-ip' : ''}">${escapeHtmlSimple(p.grade || 'Pharma Grade')}</span>
+                  ${p.cas ? `<span>CAS: ${escapeHtmlSimple(p.cas)}</span>` : ''}
+                  <span>&bull;</span>
+                  <span>${escapeHtmlSimple(p.category || 'Pharma Raw Material')}</span>
+                </div>
+              </div>
+              <div class="dropdown-item-action">
+                <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+              </div>
+            </a>
+          `;
+        }).join('');
+      }
+
+      homeSearchDropdown.style.display = 'flex';
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    homeSearchInput.addEventListener('input', (e) => {
+      clearTimeout(homeSearchDebounce);
+      homeSearchDebounce = setTimeout(() => {
+        performHomeSearch(e.target.value);
+      }, 150);
+    });
+
+    homeSearchInput.addEventListener('focus', () => {
+      if (homeSearchInput.value.trim()) {
+        performHomeSearch(homeSearchInput.value);
+      }
+    });
+
+    if (homeSearchClearBtn) {
+      homeSearchClearBtn.addEventListener('click', () => {
+        homeSearchInput.value = '';
+        homeSearchDropdown.style.display = 'none';
+        homeSearchClearBtn.style.display = 'none';
+        homeSearchInput.focus();
+      });
+    }
+
+    function executeSubmitSearch() {
+      const q = homeSearchInput.value.trim();
+      if (q) {
+        window.location.href = `products.html?search=${encodeURIComponent(q)}`;
+      } else {
+        window.location.href = 'products.html';
+      }
+    }
+
+    if (homeSearchSubmitBtn) {
+      homeSearchSubmitBtn.addEventListener('click', executeSubmitSearch);
+    }
+
+    homeSearchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        executeSubmitSearch();
+      } else if (e.key === 'Escape') {
+        if (homeSearchDropdown) homeSearchDropdown.style.display = 'none';
+      }
+    });
+
+    searchChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const term = chip.getAttribute('data-search');
+        if (term) {
+          homeSearchInput.value = term;
+          performHomeSearch(term);
+          homeSearchInput.focus();
+        }
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (homeSearchDropdown && !homeSearchDropdown.contains(e.target) && !homeSearchInput.contains(e.target)) {
+        homeSearchDropdown.style.display = 'none';
+      }
     });
   }
 });

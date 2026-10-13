@@ -1,7 +1,7 @@
 # Mehta Associates — Corporate Website
 
 > **India's Trusted Pharmaceutical Raw Materials Partner &bull; Est. 1985**
-> *"Quantity is Must, But Quality is First"* — Late Shri Shashikant C. Mehta, Founder
+> *"Quantity is Must, But Quality is First"* — Late Shri Shashikant C Mehta, Founder
 
 Official web presence for **Mehta Associates**, premier dealer and distributor in Active Pharmaceutical Ingredients (APIs), bulk drugs, antiseptic solutions, excipients, and specialty chemicals based in Mumbai, India.
 
@@ -11,8 +11,8 @@ Official web presence for **Mehta Associates**, premier dealer and distributor i
 
 - **Founded**: 1985 (41+ Years of Industry Trust)
 - **HQ**: 402, Sukhanand Krupa, Phiroz Shah Mehta Road, Santacruz (W), Mumbai — 400 054
-- **Network**: Supplying 1,500+ licensed pharmaceutical manufacturers across India
-- **Quality Assurance**: 100% batch COA compliance (IP / BP / USP)
+- **Network**: Supplying 1,500+ Customers across India
+- **Quality Assurance**: 100% batch COA compliance (I P / BP / USP)
 
 ## 📁 Repository Structure
 

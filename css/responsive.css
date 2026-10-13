@@ -44,7 +44,11 @@
 /* Medium Tablets & Mobile Landscape (<= 992px) */
 @media (max-width: 992px) {
   :root {
-    --header-height: 72px;
+    --header-height: 76px;
+  }
+
+  .brand-logo {
+    height: 56px;
   }
 
   .top-bar {
@@ -86,24 +90,50 @@
     gap: 2rem;
   }
 
-  .about-split {
+  .about-profile-grid {
     grid-template-columns: 1fr;
-    gap: 3.5rem;
+    gap: 3rem;
   }
 
-  .about-visual {
-    max-width: 560px;
+  .about-visual-box {
+    max-width: 580px;
     margin: 0 auto;
     width: 100%;
   }
 
-  .about-quote-card {
-    right: 10px;
-    bottom: -20px;
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
 
-  .strengths-grid {
+  .leadership-grid-minimal,
+  .partners-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .founder-banner-minimal,
+  .founder-tribute {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+    padding: 1.75rem 1.5rem;
+  }
+
+  .about-cta-banner-minimal {
+    padding: 2.25rem 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .catalogue-toolbar {
+    padding: 1.25rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
 
   .brochure-grid {
@@ -186,20 +216,75 @@
     justify-content: flex-end;
   }
 
-  .strengths-grid {
+  .about-visual-box img {
+    height: 300px;
+  }
+
+  .about-stats-strip {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .pillars-grid {
     grid-template-columns: 1fr;
   }
 
+  .leadership-grid-minimal,
   .partners-grid {
     grid-template-columns: 1fr;
     max-width: 420px;
     margin: 0 auto;
   }
 
+  .founder-banner-minimal,
   .founder-tribute {
     flex-direction: column;
     text-align: center;
-    padding: 1.75rem 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .about-cta-buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .about-cta-buttons .btn {
+    width: 100%;
+  }
+
+  .catalogue-search-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-download-catalog {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .catalogue-meta-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .product-custom-sourcing-banner {
+    padding: 2.25rem 1.5rem;
+  }
+
+  .sourcing-banner-actions {
+    flex-direction: column;
+  }
+
+  .sourcing-banner-actions .btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .form-grid {
@@ -244,7 +329,7 @@
   }
 
   .brand-logo {
-    height: 44px;
+    height: 50px;
   }
 
   .hero-floating-card {
