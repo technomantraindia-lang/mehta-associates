@@ -9,6 +9,14 @@
     display: none; /* Hide badge on medium viewports to avoid cramping navigation */
   }
 
+  .header-search-form {
+    width: 190px;
+  }
+
+  .header-search-form:focus-within {
+    width: 240px;
+  }
+
   .nav-desktop {
     gap: 0.25rem;
   }
@@ -56,8 +64,13 @@
   }
 
   .nav-desktop,
+  .header-search-wrap,
   .header-cta-group .btn {
-    display: none;
+    display: none !important;
+  }
+
+  .mobile-search-toggle {
+    display: flex !important;
   }
 
   .mobile-nav-toggle {

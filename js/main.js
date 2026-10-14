@@ -533,42 +533,40 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // -------------------------------------------------------------------------
-  // Home Page Direct Product Search Controller
+  // Header & Global Product Quick Search Controller
   // -------------------------------------------------------------------------
-  const homeSearchInput = document.getElementById('home-direct-search');
-  const homeSearchDropdown = document.getElementById('home-search-dropdown');
-  const homeSearchResultsList = document.getElementById('home-search-results-list');
-  const homeSearchResultsCount = document.getElementById('search-results-count');
-  const homeSearchClearBtn = document.getElementById('home-search-clear-btn');
-  const homeSearchSubmitBtn = document.getElementById('home-search-submit-btn');
-  const viewAllResultsLink = document.getElementById('view-all-results-link');
-  const searchChips = document.querySelectorAll('.search-tag-chip');
+  (function initHeaderSearch() {
+    let allProducts = [];
+    let productsLoaded = false;
+    let searchDebounce = null;
 
-  if (homeSearchInput) {
-    let allHomeProducts = [];
-    let homeSearchDebounce = null;
+    function fetchProductsData() {
+      if (productsLoaded) return Promise.resolve(allProducts);
+      return fetch('data/products.json')
+        .then(res => res.json())
+        .then(data => {
+          allProducts = data || [];
+          productsLoaded = true;
+          return allProducts;
+        })
+        .catch(err => {
+          console.warn('Could not fetch products for header search:', err);
+          return [];
+        });
+    }
 
-    // Fetch products catalogue for instant search
-    fetch('data/products.json')
-      .then(res => res.json())
-      .then(data => {
-        allHomeProducts = data;
-      })
-      .catch(err => {
-        console.warn('Could not pre-fetch products for home search:', err);
-      });
+    // Pre-fetch products on idle
+    if (typeof requestIdleCallback === 'function') {
+      requestIdleCallback(() => fetchProductsData());
+    } else {
+      setTimeout(fetchProductsData, 1000);
+    }
 
     const normTerm = s => (s || '').toLowerCase().replace(/\bi\s*p\b/g, 'i p');
 
-    function performHomeSearch(query) {
+    function filterProducts(query) {
       const rawQuery = (query || '').trim();
-      if (!rawQuery) {
-        if (homeSearchDropdown) homeSearchDropdown.style.display = 'none';
-        if (homeSearchClearBtn) homeSearchClearBtn.style.display = 'none';
-        return;
-      }
-
-      if (homeSearchClearBtn) homeSearchClearBtn.style.display = 'flex';
+      if (!rawQuery) return [];
 
       const queryTokens = normTerm(rawQuery).split(/\s+/).filter(Boolean);
       const consolidatedTokens = [];
@@ -581,17 +579,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      const matches = allHomeProducts.filter(item => {
-        const itemText = normTerm(`${item.name} ${item.description || ''} ${item.grade || ''} ${item.cas || ''} ${item.applications || ''}`);
+      return allProducts.filter(item => {
+        const itemText = normTerm(`${item.name} ${item.description || ''} ${item.grade || ''} ${item.cas || ''} ${item.applications || ''} ${item.category || ''}`);
         return consolidatedTokens.every(token => itemText.includes(token));
       });
-
-      renderDropdownResults(matches, rawQuery);
     }
 
-    function escapeHtmlSimple(str) {
+    function escapeHtml(str) {
       if (!str) return '';
-      return str
+      return String(str)
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
@@ -599,111 +595,145 @@ document.addEventListener('DOMContentLoaded', () => {
         .replace(/'/g, '&#039;');
     }
 
-    function renderDropdownResults(matches, rawQuery) {
-      if (!homeSearchDropdown || !homeSearchResultsList) return;
+    // Attach search behavior to all header search instances
+    const headerSearchWraps = document.querySelectorAll('.header-search-wrap');
 
-      if (homeSearchResultsCount) {
-        homeSearchResultsCount.textContent = `${matches.length} Product${matches.length === 1 ? '' : 's'} Found`;
-      }
-      if (viewAllResultsLink) {
-        viewAllResultsLink.href = `products.html?search=${encodeURIComponent(rawQuery)}`;
-      }
+    headerSearchWraps.forEach(wrap => {
+      const form = wrap.querySelector('.header-search-form');
+      const input = wrap.querySelector('.header-search-input');
+      const clearBtn = wrap.querySelector('.header-search-clear');
+      const dropdown = wrap.querySelector('.header-search-dropdown');
+      const resultsContainer = wrap.querySelector('.header-search-results');
+      const countEl = wrap.querySelector('.header-search-count');
+      const viewAllLink = wrap.querySelector('.header-search-view-all');
 
-      if (matches.length === 0) {
-        homeSearchResultsList.innerHTML = `
-          <div class="dropdown-empty">
-            <p>No products matching "<strong>${escapeHtmlSimple(rawQuery)}</strong>"</p>
-            <p style="font-size: 0.8125rem; margin-top: 0.35rem; color: #94A3B8;">Try searching generic chemical name, CAS number, or pharmacopoeia standard (I P / B P / U S P).</p>
-          </div>
-        `;
-      } else {
-        const topResults = matches.slice(0, 7);
-        homeSearchResultsList.innerHTML = topResults.map(p => {
-          const imgUrl = p.image || 'assets/images/products/bulk-api-powder.jpg';
-          const isIP = (p.grade || '').includes('I P') || (p.name || '').includes('I P');
-          return `
-            <a href="product-detail.html?id=${encodeURIComponent(p.id)}" class="dropdown-item">
-              <img src="${imgUrl}" alt="${escapeHtmlSimple(p.name)}" class="dropdown-item-thumb" onerror="this.src='assets/images/products/bulk-api-powder.jpg'">
-              <div class="dropdown-item-info">
-                <div class="dropdown-item-name">${escapeHtmlSimple(p.name)}</div>
-                <div class="dropdown-item-meta">
-                  <span class="dropdown-item-badge ${isIP ? 'grade-ip' : ''}">${escapeHtmlSimple(p.grade || 'Pharma Grade')}</span>
-                  ${p.cas ? `<span>CAS: ${escapeHtmlSimple(p.cas)}</span>` : ''}
-                  <span>&bull;</span>
-                  <span>${escapeHtmlSimple(p.category || 'Pharma Raw Material')}</span>
-                </div>
-              </div>
-              <div class="dropdown-item-action">
-                <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
-              </div>
-            </a>
+      if (!input || !dropdown || !resultsContainer) return;
+
+      function renderResults(matches, query) {
+        const raw = (query || '').trim();
+        if (!raw) {
+          dropdown.style.display = 'none';
+          if (clearBtn) clearBtn.style.display = 'none';
+          return;
+        }
+
+        if (clearBtn) clearBtn.style.display = 'flex';
+
+        if (countEl) {
+          countEl.textContent = `${matches.length} Product${matches.length === 1 ? '' : 's'} Found`;
+        }
+        if (viewAllLink) {
+          viewAllLink.href = `products.html?search=${encodeURIComponent(raw)}`;
+        }
+
+        if (matches.length === 0) {
+          resultsContainer.innerHTML = `
+            <div class="header-search-empty">
+              <p>No products matching "<strong>${escapeHtml(raw)}</strong>"</p>
+              <p style="font-size: 0.75rem; margin-top: 0.35rem; color: #94A3B8;">Press Enter to search full 38+ product catalogue.</p>
+            </div>
           `;
-        }).join('');
+        } else {
+          const topList = matches.slice(0, 6);
+          resultsContainer.innerHTML = topList.map(p => {
+            const imgUrl = p.image || 'assets/images/products/bulk-api-powder.jpg';
+            const gradeText = p.grade || 'Pharma Grade';
+            return `
+              <a href="product-detail.html?id=${encodeURIComponent(p.id)}" class="header-search-item" role="option">
+                <img src="${imgUrl}" alt="${escapeHtml(p.name)}" class="header-search-item-thumb" onerror="this.src='assets/images/products/bulk-api-powder.jpg'">
+                <div class="header-search-item-content">
+                  <div class="header-search-item-title">${escapeHtml(p.name)}</div>
+                  <div class="header-search-item-meta">
+                    <span class="header-search-item-grade">${escapeHtml(gradeText)}</span>
+                    ${p.cas ? `<span>CAS: ${escapeHtml(p.cas)}</span>` : ''}
+                    <span>&bull;</span>
+                    <span>${escapeHtml(p.category || 'Raw Material')}</span>
+                  </div>
+                </div>
+                <div class="header-search-item-arrow">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </div>
+              </a>
+            `;
+          }).join('');
+        }
+
+        dropdown.style.display = 'block';
       }
 
-      homeSearchDropdown.style.display = 'flex';
-      if (window.lucide) window.lucide.createIcons();
-    }
-
-    homeSearchInput.addEventListener('input', (e) => {
-      clearTimeout(homeSearchDebounce);
-      homeSearchDebounce = setTimeout(() => {
-        performHomeSearch(e.target.value);
-      }, 150);
-    });
-
-    homeSearchInput.addEventListener('focus', () => {
-      if (homeSearchInput.value.trim()) {
-        performHomeSearch(homeSearchInput.value);
-      }
-    });
-
-    if (homeSearchClearBtn) {
-      homeSearchClearBtn.addEventListener('click', () => {
-        homeSearchInput.value = '';
-        homeSearchDropdown.style.display = 'none';
-        homeSearchClearBtn.style.display = 'none';
-        homeSearchInput.focus();
+      input.addEventListener('input', (e) => {
+        clearTimeout(searchDebounce);
+        const query = e.target.value;
+        searchDebounce = setTimeout(() => {
+          fetchProductsData().then(() => {
+            const matches = filterProducts(query);
+            renderResults(matches, query);
+          });
+        }, 120);
       });
-    }
 
-    function executeSubmitSearch() {
-      const q = homeSearchInput.value.trim();
-      if (q) {
-        window.location.href = `products.html?search=${encodeURIComponent(q)}`;
-      } else {
-        window.location.href = 'products.html';
+      input.addEventListener('focus', () => {
+        if (input.value.trim()) {
+          fetchProductsData().then(() => {
+            const matches = filterProducts(input.value);
+            renderResults(matches, input.value);
+          });
+        }
+      });
+
+      if (clearBtn) {
+        clearBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          input.value = '';
+          dropdown.style.display = 'none';
+          clearBtn.style.display = 'none';
+          input.focus();
+        });
       }
-    }
 
-    if (homeSearchSubmitBtn) {
-      homeSearchSubmitBtn.addEventListener('click', executeSubmitSearch);
-    }
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          dropdown.style.display = 'none';
+        } else if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          const firstItem = dropdown.querySelector('.header-search-item');
+          if (firstItem) firstItem.focus();
+        }
+      });
 
-    homeSearchInput.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        executeSubmitSearch();
-      } else if (e.key === 'Escape') {
-        if (homeSearchDropdown) homeSearchDropdown.style.display = 'none';
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          const q = input.value.trim();
+          if (!q) {
+            e.preventDefault();
+            window.location.href = 'products.html';
+          }
+        });
       }
     });
 
-    searchChips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        const term = chip.getAttribute('data-search');
-        if (term) {
-          homeSearchInput.value = term;
-          performHomeSearch(term);
-          homeSearchInput.focus();
+    // Close any open dropdown on click outside
+    document.addEventListener('click', (e) => {
+      headerSearchWraps.forEach(wrap => {
+        const dropdown = wrap.querySelector('.header-search-dropdown');
+        if (dropdown && !wrap.contains(e.target)) {
+          dropdown.style.display = 'none';
         }
       });
     });
 
-    document.addEventListener('click', (e) => {
-      if (homeSearchDropdown && !homeSearchDropdown.contains(e.target) && !homeSearchInput.contains(e.target)) {
-        homeSearchDropdown.style.display = 'none';
-      }
-    });
-  }
+    // Mobile Search Bar Toggle
+    const mobileSearchToggle = document.getElementById('mobile-search-toggle');
+    const mobileSearchBar = document.getElementById('mobile-search-bar');
+    if (mobileSearchToggle && mobileSearchBar) {
+      mobileSearchToggle.addEventListener('click', () => {
+        const isShown = mobileSearchBar.style.display === 'block';
+        mobileSearchBar.style.display = isShown ? 'none' : 'block';
+        if (!isShown) {
+          const mInput = mobileSearchBar.querySelector('.mobile-search-input');
+          if (mInput) mInput.focus();
+        }
+      });
+    }
+  })();
 });

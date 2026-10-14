@@ -95,14 +95,37 @@
 
       <!-- Header CTAs (Right) -->
       <div class="header-cta-group">
-        <!-- Word Animation: Dynamic Live Sourcing Badge -->
-        <div class="header-sourcing-badge" id="header-sourcing-badge" title="Live Pharmaceutical Portfolio">
-          <span class="badge-status-ring">
-            <span class="badge-status-dot"></span>
-          </span>
-          <span class="badge-label">SOURCING</span>
-          <div class="badge-rotator-viewport">
-            <span class="badge-rotating-word" id="header-rotating-word">Active APIs</span>
+        <!-- Header Product Search Bar -->
+        <div class="header-search-wrap" id="header-search-wrap">
+          <form class="header-search-form" action="products.html" method="GET" role="search">
+            <i data-lucide="search" class="header-search-icon" aria-hidden="true"></i>
+            <input 
+              type="text" 
+              name="search" 
+              class="header-search-input" 
+              placeholder="Search 38+ APIs &amp; chemicals..." 
+              autocomplete="off" 
+              spellcheck="false" 
+              aria-label="Search pharmaceutical products">
+            <button type="button" class="header-search-clear" aria-label="Clear search" style="display: none;">
+              <i data-lucide="x" style="width: 14px; height: 14px;"></i>
+            </button>
+            <button type="submit" class="header-search-btn" aria-label="Search catalogue">
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </button>
+          </form>
+
+          <!-- Autocomplete Dropdown Popup -->
+          <div class="header-search-dropdown" style="display: none;" role="listbox" aria-label="Search results">
+            <div class="header-search-dropdown-header">
+              <span class="header-search-count">Matching Products</span>
+              <a href="products.html" class="header-search-view-all">View All 38+ &rarr;</a>
+            </div>
+            <div class="header-search-results"></div>
+            <div class="header-search-dropdown-footer">
+              <span><kbd>Enter</kbd> to search catalogue</span>
+              <span>I P &bull; B P &bull; U S P</span>
+            </div>
           </div>
         </div>
 
@@ -110,6 +133,11 @@
           <span>Send an Enquiry</span>
           <i data-lucide="arrow-right" class="btn-arrow" style="width: 16px; height: 16px;"></i>
         </a>
+
+        <!-- Mobile Search Toggle Button -->
+        <button type="button" class="mobile-search-toggle" id="mobile-search-toggle" aria-label="Toggle product search">
+          <i data-lucide="search" style="width: 18px; height: 18px;"></i>
+        </button>
 
         <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
           <span></span>
@@ -120,12 +148,31 @@
     </div>
   </header>
 
+  <!-- Mobile Search Slide-Down Bar -->
+  <div class="mobile-search-bar" id="mobile-search-bar" style="display: none;">
+    <div class="container">
+      <form class="mobile-search-form" action="products.html" method="GET" role="search">
+        <i data-lucide="search" class="mobile-search-icon" aria-hidden="true"></i>
+        <input type="text" name="search" class="mobile-search-input" placeholder="Search 38+ APIs, chemicals, CAS..." autocomplete="off">
+        <button type="submit" class="btn btn-primary btn-sm" style="padding: 0.35rem 0.85rem; font-size: 0.8125rem;">Search</button>
+      </form>
+    </div>
+  </div>
+
   <!-- Mobile Drawer & Backdrop -->
   <div class="mobile-nav-backdrop"></div>
   <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Menu">
     <div>
-      <div style="margin-bottom: 2rem;">
+      <div style="margin-bottom: 1.5rem;">
         <img src="assets/images/logo.png" alt="Mehta Associates" style="height: 42px; width: auto;">
+      </div>
+      <!-- Mobile Drawer Search Bar -->
+      <div class="mobile-drawer-search">
+        <form action="products.html" method="GET" class="mobile-drawer-search-form" role="search">
+          <i data-lucide="search" style="width: 16px; height: 16px; color: #94A3B8;"></i>
+          <input type="text" name="search" placeholder="Search 38+ APIs &amp; chemicals..." autocomplete="off">
+          <button type="submit" aria-label="Search"><i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></button>
+        </form>
       </div>
       <nav class="mobile-nav-links">
         <a href="index.html" class="nav-link">Home</a>
