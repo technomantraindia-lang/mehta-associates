@@ -1110,6 +1110,16 @@ p:last-child {
   width: 100%;
   padding: 0.15rem 0;
   min-width: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+}
+
+.header-search-input:focus,
+.header-search-input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 .header-search-input::placeholder {
@@ -1131,6 +1141,12 @@ p:last-child {
   transition: color 0.15s ease;
 }
 
+.header-search-clear:focus,
+.header-search-clear:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .header-search-clear:hover {
   color: #0F172A;
 }
@@ -1149,6 +1165,12 @@ p:last-child {
   flex-shrink: 0;
   margin-left: 0.35rem;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.header-search-btn:focus,
+.header-search-btn:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.35) !important;
 }
 
 .header-search-btn:hover {
@@ -1391,6 +1413,15 @@ p:last-child {
   outline: none;
   font-size: 0.875rem;
   color: var(--color-secondary);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.mobile-search-input:focus,
+.mobile-search-input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 /* Mobile Drawer Search Box */
@@ -6478,9 +6509,9 @@ p:last-child {
 
 /* Accessibility Focus States */
 a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
+button:focus-visible:not(.header-search-btn):not(.header-search-clear),
+input:focus-visible:not(.header-search-input):not(.mobile-search-input):not(.search-input):not(.form-input),
+textarea:focus-visible:not(.form-textarea) {
   outline: 2px solid var(--color-secondary);
   outline-offset: 2px;
 }
