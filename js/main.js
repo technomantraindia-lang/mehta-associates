@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'Guaranteed I P • B P • U S P Pharmacopoeia Standards',
       'Motto: "Quantity is Must, But Quality is First"',
       'Direct Manufacturer Indenting & Mumbai Logistics',
-      'Trusted Partner to 1,500+ Customers'
+      'Trusted Partner to 2,250+ Customers'
     ];
     let highlightIndex = 0;
 

@@ -11,7 +11,7 @@ Official web presence for **Mehta Associates**, premier dealer and distributor i
 
 - **Founded**: 1985 (41+ Years of Industry Trust)
 - **HQ**: 402, Sukhanand Krupa, Phiroz Shah Mehta Road, Santacruz (W), Mumbai — 400 054
-- **Network**: Supplying 1,500+ Customers across India
+- **Network**: Supplying 2,250+ Customers across India
 - **Quality Assurance**: 100% batch COA compliance (I P / BP / USP)
 
 ## 📁 Repository Structure

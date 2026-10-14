@@ -6669,6 +6669,19 @@ textarea:focus-visible {
   color: #0F172A;
 }
 
+.director-contact-btn.btn-linkedin {
+  background: #0A66C2;
+  border: 1px solid #0A66C2;
+  color: #FFFFFF;
+}
+
+.director-contact-btn.btn-linkedin:hover {
+  background: #004182;
+  border-color: #004182;
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.35);
+}
+
 @media (max-width: 900px) {
   .aether-director-card {
     grid-template-columns: 1fr;
