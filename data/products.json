@@ -111,7 +111,7 @@
   },
   {
     "id": "diethyl-carbamazine-citrate-ip",
-    "name": "Diethyl Carbamazine Citrate I P (DEC)",
+    "name": "Diethyl Carbamazine Citrate I P (DECC)",
     "category": "Active Pharmaceutical Ingredients (APIs)",
     "grade": "I P (Indian Pharmacopoeia)",
     "cas": "1642-54-2",
@@ -131,7 +131,7 @@
   },
   {
     "id": "doss-bp",
-    "name": "D.O.S.S BP (Dioctyl Sodium Sulfosuccinate)",
+    "name": "D.O.S.S BP",
     "category": "Preservatives & Excipients",
     "grade": "BP (British Pharmacopoeia)",
     "cas": "577-11-7",
@@ -191,7 +191,7 @@
   },
   {
     "id": "methyl-paraben-ip",
-    "name": "Methyl Paraben I P (Methylparaben)",
+    "name": "Methyl Paraben I P",
     "category": "Preservatives & Excipients",
     "grade": "I P (Indian Pharmacopoeia)",
     "cas": "99-76-3",
@@ -271,7 +271,7 @@
   },
   {
     "id": "propyl-paraben-ip",
-    "name": "Propyl Paraben I P (Propylparaben)",
+    "name": "Propyl Paraben I P",
     "category": "Preservatives & Excipients",
     "grade": "I P (Indian Pharmacopoeia)",
     "cas": "94-13-3",
@@ -361,7 +361,7 @@
   },
   {
     "id": "vitamin-k3-feed",
-    "name": "Vitamin K3 (Menadione) Feed Grade",
+    "name": "Vitamin K3 Feed Grade",
     "category": "Minerals & Nutritional Supplements",
     "grade": "Feed Grade (MNB / MSB)",
     "cas": "58-27-5",
@@ -371,7 +371,7 @@
   },
   {
     "id": "wintergreen-oil",
-    "name": "Wintergreen Oil (Gaultheria Oil)",
+    "name": "Wintergreen Oil",
     "category": "Essential Oils & Botanicals",
     "grade": "Natural Steam Distilled",
     "cas": "68917-75-9",

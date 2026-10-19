@@ -220,7 +220,7 @@
       industries: ['Dental Healthcare', 'Oral Mucosal Therapeutics', 'Topical Care']
     },
     'diethyl-carbamazine-citrate-ip': {
-      chemicalName: 'Diethylcarbamazine Dihydrogen Citrate (DEC)',
+      chemicalName: 'Diethylcarbamazine Dihydrogen Citrate (DECC)',
       formula: 'C₁₆H₂₉N₃O₈',
       mw: '391.42 g/mol',
       appearance: 'White crystalline powder; odourless with acid taste',
@@ -246,7 +246,7 @@
       industries: ['Allergy & Cough Formulations', 'OTC Therapeutics', 'Sedative Blends']
     },
     'doss-bp': {
-      chemicalName: 'Dioctyl Sodium Sulfosuccinate BP (Docusate Sodium)',
+      chemicalName: 'Dioctyl Sodium Sulfosuccinate BP',
       formula: 'C₂₀H₃₇NaO₇S',
       mw: '444.56 g/mol',
       appearance: 'White or almost white waxy plastic solid',
@@ -324,7 +324,7 @@
       industries: ['Topical Analgesic Formulations', 'Sports Medicine']
     },
     'methyl-paraben-ip': {
-      chemicalName: 'Methyl 4-Hydroxybenzoate (Methylparaben)',
+      chemicalName: 'Methyl 4-Hydroxybenzoate',
       formula: 'C₈H₈O₃',
       mw: '152.15 g/mol',
       appearance: 'Colourless crystals or white crystalline powder',
@@ -337,7 +337,7 @@
       industries: ['Pharmaceutical Preservatives', 'Dermatology & Topicals', 'Personal Care']
     },
     'propyl-paraben-ip': {
-      chemicalName: 'Propyl 4-Hydroxybenzoate (Propylparaben)',
+      chemicalName: 'Propyl 4-Hydroxybenzoate',
       formula: 'C₁₀H₁₂O₃',
       mw: '180.20 g/mol',
       appearance: 'White crystalline powder or colourless crystals',
@@ -545,7 +545,7 @@
       industries: ['Nutraceutical Manufacturing', 'Dietary Supplements']
     },
     'vitamin-k3-feed': {
-      chemicalName: 'Menadione (2-Methyl-1,4-naphthoquinone) Feed Grade',
+      chemicalName: 'Menadione Feed Grade',
       formula: 'C₁₁H₈O₂',
       mw: '172.18 g/mol',
       appearance: 'White to brownish-yellow crystalline powder',
@@ -558,7 +558,7 @@
       industries: ['Animal Nutrition & Feed', 'Veterinary Formulations']
     },
     'wintergreen-oil': {
-      chemicalName: 'Gaultheria Procumbens Leaf Essential Oil (> 98% Natural Ester)',
+      chemicalName: 'Wintergreen Essential Oil (> 98% Natural Ester)',
       formula: 'Natural Botanical Ester (C₈H₈O₃ base)',
       mw: '152.15 g/mol',
       appearance: 'Colourless, pale yellow or reddish clear aromatic liquid',
