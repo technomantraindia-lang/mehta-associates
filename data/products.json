@@ -30,6 +30,26 @@
     "image": "assets/images/products/ambroxol-hcl.jpg"
   },
   {
+    "id": "glycine-ip",
+    "name": "Glycine I P",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "I P (Indian Pharmacopoeia)",
+    "cas": "56-40-6",
+    "description": "Pharmaceutical grade Aminoacetic Acid meeting Indian Pharmacopoeial standards, widely utilized as an active buffer, infusion component, and synthesis building block.",
+    "applications": "Intravenous amino acid infusions, antacid buffering, oral rehydration salts, pharmaceutical excipient",
+    "image": "assets/images/products/bulk-api-powder.jpg"
+  },
+  {
+    "id": "glycine-usp",
+    "name": "Glycine USP",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "USP (United States Pharmacopeia)",
+    "cas": "56-40-6",
+    "description": "High-purity compendial amino acid complying with USP standards for sterile urological irrigating solutions, parenteral nutrition, and pharmaceutical compounding.",
+    "applications": "Sterile urological irrigation fluids, parenteral nutrition, pharmaceutical buffering, dietary formulations",
+    "image": "assets/images/products/bulk-api-powder.jpg"
+  },
+  {
     "id": "benzyl-alcohol-ip",
     "name": "Benzyl Alcohol I P",
     "category": "Preservatives & Excipients",
@@ -80,6 +100,16 @@
     "image": "assets/images/products/antiseptic-solution.jpg"
   },
   {
+    "id": "chloroxylenol-bp",
+    "name": "Chloroxylenol BP",
+    "category": "Antiseptics & Disinfectants",
+    "grade": "BP (British Pharmacopoeia)",
+    "cas": "88-04-0",
+    "description": "Broad-spectrum chlorinated phenolic antimicrobial (PCMX) conforming to BP monograph, widely utilized in gold-standard antiseptic disinfectant liquids, surgical scrubs, and hospital sanitation products.",
+    "applications": "Topical antiseptic solutions, surgical hand scrubs, wound washes, antibacterial soaps",
+    "image": "assets/images/products/antiseptic-solution.jpg"
+  },
+  {
     "id": "chromium-picolinate-usp",
     "name": "Chromium Picolinate USP",
     "category": "Minerals & Nutritional Supplements",
@@ -91,12 +121,22 @@
   },
   {
     "id": "chromium-polynicotinate",
-    "name": "Chromium Polynicotinate",
+    "name": "Chromium Poly-Nicotinate",
     "category": "Minerals & Nutritional Supplements",
-    "grade": "Nutraceutical / Food Grade",
+    "grade": "USP / Food Grade (Nutraceutical)",
     "cas": "64452-96-6",
-    "description": "Niacin-bound chromium mineral complex facilitating optimal physiological absorption.",
+    "description": "Niacin-bound chromium mineral complex facilitating optimal physiological absorption and glucose metabolic support.",
     "applications": "Nutraceutical premixes, dietary tablets & capsules",
+    "image": "assets/images/products/mineral-chelates.jpg"
+  },
+  {
+    "id": "chromium-chloride-usp",
+    "name": "Chromium Chloride USP",
+    "category": "Minerals & Nutritional Supplements",
+    "grade": "USP (United States Pharmacopeia)",
+    "cas": "10060-12-5",
+    "description": "High-purity trivalent Chromium (III) Chloride Hexahydrate conforming to USP standards, utilized as a crucial trace element additive in total parenteral nutrition (TPN) and mineral formulations.",
+    "applications": "Total parenteral nutrition (TPN) infusions, mineral injectables, dietary supplementation, metabolic support",
     "image": "assets/images/products/mineral-chelates.jpg"
   },
   {
@@ -160,13 +200,13 @@
     "image": "assets/images/products/essential-botanical-oils.jpg"
   },
   {
-    "id": "iodoform",
-    "name": "Iodoform",
+    "id": "iodoform-usp",
+    "name": "Iodoform USP",
     "category": "Antiseptics & Disinfectants",
-    "grade": "Pure Pharma Grade",
+    "grade": "USP (United States Pharmacopeia)",
     "cas": "75-47-8",
-    "description": "Organosulfur yellow crystalline substance utilized for surgical dressings and endodontic treatments.",
-    "applications": "Dental root canal pastes, wound dressings, antiseptic gauze",
+    "description": "Compendial grade triiodomethane conforming to United States Pharmacopeia standards for surgical wound antiseptics, medicated gauze dressing, and dental endodontic pastes.",
+    "applications": "Dental root canal pastes, surgical antiseptic gauze packing, wound dressings",
     "image": "assets/images/products/iodoform-yellow-powder.jpg"
   },
   {
@@ -261,12 +301,22 @@
   },
   {
     "id": "piperazine-adipate-ip",
-    "name": "Piperazine Adipate I P",
+    "name": "Piperazine Adipate I P / B P",
     "category": "Active Pharmaceutical Ingredients (APIs)",
-    "grade": "I P (Indian Pharmacopoeia)",
+    "grade": "I P / B P Grade",
     "cas": "142-88-1",
-    "description": "Adipate salt formulation offering high chemical stability and mild palatability in oral dosage forms.",
-    "applications": "Solid anthelmintic doses, roundworm treatment",
+    "description": "Adipate salt formulation offering high chemical stability and mild palatability in oral anthelmintic dosage forms.",
+    "applications": "Solid anthelmintic doses, roundworm treatment, veterinary boluses",
+    "image": "assets/images/products/bulk-api-powder.jpg"
+  },
+  {
+    "id": "piperazine-dihydrochloride",
+    "name": "Piperazine Dihydrochloride",
+    "category": "Active Pharmaceutical Ingredients (APIs)",
+    "grade": "Pharma Grade / BP / USP",
+    "cas": "142-64-3",
+    "description": "Freely soluble anthelmintic dihydrochloride salt for human deworming tablets and veterinary soluble powders.",
+    "applications": "Veterinary drinking water solutions, anthelmintic powders, solid dosage deworming",
     "image": "assets/images/products/bulk-api-powder.jpg"
   },
   {

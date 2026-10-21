@@ -12,13 +12,19 @@
     'aspirin-granules-ip': 'assets/images/products/aspirin-granules.jpg',
     'aspirin-powder-ip': 'assets/images/products/aspirin-granules.jpg',
     'ambroxol-hcl-ip': 'assets/images/products/ambroxol-hcl.jpg',
+    'glycine-ip': 'assets/images/products/bulk-api-powder.jpg',
+    'glycine-usp': 'assets/images/products/bulk-api-powder.jpg',
     'benzyl-alcohol-ip': 'assets/images/products/benzyl-alcohol.jpg',
     'cetrimide-ip': 'assets/images/products/cetrimide.jpg',
     'strong-cetrimide-solution-40': 'assets/images/products/cetrimide.jpg',
     'chlorhexidine-gluconate-20-ip': 'assets/images/products/antiseptic-solution.jpg',
     'chlorhexidine-hcl-ip': 'assets/images/products/antiseptic-solution.jpg',
+    'chloroxylenol-bp': 'assets/images/products/antiseptic-solution.jpg',
     'chromium-picolinate-usp': 'assets/images/products/mineral-chelates.jpg',
     'chromium-polynicotinate': 'assets/images/products/mineral-chelates.jpg',
+    'chromium-poly-nicotinate': 'assets/images/products/mineral-chelates.jpg',
+    'chromium-chloride-usp': 'assets/images/products/mineral-chelates.jpg',
+    'chromium-chloride': 'assets/images/products/mineral-chelates.jpg',
     'choline-salicylate-bp': 'assets/images/products/pharma-liquid-solution.jpg',
     'diethyl-carbamazine-citrate-ip': 'assets/images/products/bulk-api-powder.jpg',
     'diphenhydramine-hcl-ip': 'assets/images/products/bulk-api-powder.jpg',
@@ -26,6 +32,7 @@
     'docusate-sodium-powder-85': 'assets/images/products/bulk-api-powder.jpg',
     'eucalyptus-oil': 'assets/images/products/essential-botanical-oils.jpg',
     'iodoform': 'assets/images/products/iodoform-yellow-powder.jpg',
+    'iodoform-usp': 'assets/images/products/iodoform-yellow-powder.jpg',
     'lemongrass-oil': 'assets/images/products/essential-botanical-oils.jpg',
     'methyl-nicotinate-bp': 'assets/images/products/pharma-liquid-solution.jpg',
     'methyl-paraben-ip': 'assets/images/products/paraben-preservatives.jpg',
@@ -36,6 +43,8 @@
     'piperazine-hexahydrate-ip': 'assets/images/products/bulk-api-powder.jpg',
     'piperazine-phosphate-ip': 'assets/images/products/bulk-api-powder.jpg',
     'piperazine-adipate-ip': 'assets/images/products/bulk-api-powder.jpg',
+    'piperazine-adipate': 'assets/images/products/bulk-api-powder.jpg',
+    'piperazine-dihydrochloride': 'assets/images/products/bulk-api-powder.jpg',
     'propyl-paraben-ip': 'assets/images/products/paraben-preservatives.jpg',
     'salicylic-acid-ip': 'assets/images/products/salicylic-acid-crystals.jpg',
     'technical-salicylic-acid': 'assets/images/products/industrial-chemicals.jpg',
@@ -285,17 +294,30 @@
       industries: ['Ayurvedic & Herbal Pharma', 'Respiratory Care', 'Topical Balms']
     },
     'iodoform': {
-      chemicalName: 'Triiodomethane / Iodoform Pure',
+      chemicalName: 'Triiodomethane (USP Compendial Grade)',
       formula: 'CHI₃',
       mw: '393.73 g/mol',
-      appearance: 'Shining lemon-yellow crystals with penetrating odor',
-      assay: '99.0% – 100.5% (Iodometric Titration)',
-      solubility: 'Practically insoluble in water; soluble in ether',
-      packaging: '25 Kg Fibre Drums / 10 Kg HDPE Cans',
-      storage: 'Amber glass / opaque containers below 20°C',
+      appearance: 'Shining lemon-yellow crystals or lustrous powder with penetrating odor',
+      assay: '99.0% – 100.5% (USP Titrimetric on dried basis)',
+      solubility: 'Practically insoluble in water; freely soluble in ether and chloroform',
+      packaging: '25 Kg Fibre Drums / 5 Kg Airtight Amber Glass or HDPE Containers',
+      storage: 'Preserve in tight, light-resistant containers below 25°C',
       shelfLife: '36 Months from Manufacturing Date',
-      dosageForms: ['Dental Root Canal Pastes', 'Antiseptic Dressings'],
-      industries: ['Endodontic & Dental Care', 'Surgical Dressing Manufacture']
+      dosageForms: ['Dental Root Canal Pastes', 'Medicated Antiseptic Gauze', 'Surgical Dressing Powder'],
+      industries: ['Endodontic & Dental Care', 'Surgical Dressing Manufacture', 'Wound Management']
+    },
+    'iodoform-usp': {
+      chemicalName: 'Triiodomethane (USP Compendial Grade)',
+      formula: 'CHI₃',
+      mw: '393.73 g/mol',
+      appearance: 'Lustrous greenish-yellow powder or crystalline scales with characteristic odor',
+      assay: '99.0% – 100.5% (USP Titrimetric on dried basis)',
+      solubility: 'Practically insoluble in water; freely soluble in ether, chloroform, and warm alcohol',
+      packaging: '25 Kg Fibre Drums / 5 Kg Airtight Amber Containers',
+      storage: 'Preserve in tight, light-resistant containers away from heat and direct sunlight',
+      shelfLife: '36 Months from Manufacturing Date',
+      dosageForms: ['Dental Root Canal Pastes & Pastes', 'Antiseptic Dressing Gauze Packing', 'Surgical Wound Dressings'],
+      industries: ['Endodontic & Dental Specialty', 'Hospital Wound Care', 'Surgical Gauze Impregnation']
     },
     'lemongrass-oil': {
       chemicalName: 'Cymbopogon Citratus Essential Oil (Citral rich)',
@@ -569,6 +591,110 @@
       shelfLife: '36 Months from Manufacturing Date',
       dosageForms: ['Ayurvedic Pain Balms', 'Joint Pain Liniments', 'Massage Oils'],
       industries: ['Ayurvedic & Herbal Manufacturing', 'Topical Analgesics']
+    },
+    'glycine-ip': {
+      chemicalName: 'Aminoacetic Acid / 2-Aminoethanoic Acid (I P)',
+      formula: 'C₂H₅NO₂',
+      mw: '75.07 g/mol',
+      appearance: 'White or almost white crystalline powder or colourless crystals',
+      assay: '98.5% – 101.5% (Non-aqueous titration on dried basis)',
+      solubility: 'Freely soluble in water; very slightly soluble in ethanol (96%)',
+      packaging: '25 Kg Fibre Drum / HDPE Drum with polyethylene moisture barrier',
+      storage: 'Store in well-closed, light-resistant containers in a dry area below 25°C',
+      shelfLife: '36 Months from Manufacturing Date',
+      dosageForms: ['Intravenous Amino Acid Infusions', 'Oral Rehydration Salts (ORS)', 'Antacid Formulations', 'Parenteral Buffering Solutions'],
+      industries: ['Pharmaceutical Finished Dosage', 'Parenteral & Infusion Manufacturing', 'Clinical Nutrition']
+    },
+    'glycine-usp': {
+      chemicalName: 'Aminoacetic Acid (USP Compendial Grade)',
+      formula: 'C₂H₅NO₂',
+      mw: '75.07 g/mol',
+      appearance: 'White, odorless, crystalline powder having a sweetish taste',
+      assay: '98.5% – 101.5% (USP Titrimetric on dried basis)',
+      solubility: 'Freely soluble in water; very slightly soluble in alcohol and ether',
+      packaging: '25 Kg Fibre Drum with dual food/pharma grade polyethylene liner',
+      storage: 'Preserve in well-closed containers at controlled room temperature',
+      shelfLife: '48 Months from Manufacturing Date',
+      dosageForms: ['Sterile Urological Irrigating Solutions', 'Total Parenteral Nutrition (TPN)', 'Oral Buffer Tablets', 'Electrolyte Powders'],
+      industries: ['Surgical & Irrigation Solutions', 'Parenteral Drug Manufacturing', 'Nutraceutical & Medical Food']
+    },
+    'chloroxylenol-bp': {
+      chemicalName: '4-Chloro-3,5-dimethylphenol (PCMX / BP Grade)',
+      formula: 'C₈H₉ClO',
+      mw: '156.61 g/mol',
+      appearance: 'White to off-white crystalline powder or crystals with phenolic odor',
+      assay: '98.0% – 101.5% (Gas Chromatography / BP Monograph)',
+      solubility: 'Very slightly soluble in water; freely soluble in ethanol (96%), ether, and alkaline solutions',
+      packaging: '25 Kg Multi-wall Paper Bags / Fibre Drums with poly inner liner',
+      storage: 'Store in well-closed containers protected from light and excessive heat',
+      shelfLife: '48 Months from Manufacturing Date',
+      dosageForms: ['Antiseptic Disinfectant Liquids', 'Surgical Scrubs & Hand Washes', 'Medicated Bar Soaps', 'Topical Antibacterial Creams'],
+      industries: ['Hospital & Surgical Antisepsis', 'Institutional Hygiene & Disinfectants', 'Personal Care & Medicated Soaps']
+    },
+    'chromium-chloride-usp': {
+      chemicalName: 'Chromium (III) Chloride Hexahydrate (USP Grade)',
+      formula: 'CrCl₃ · 6H₂O',
+      mw: '266.45 g/mol',
+      appearance: 'Dark green crystalline powder or granules, deliquescent',
+      assay: '98.0% – 102.0% CrCl₃ · 6H₂O (USP Compendial)',
+      solubility: 'Freely soluble in water and in alcohol; practically insoluble in ether',
+      packaging: '25 Kg Fibre Drums / HDPE Drums with polyethylene moisture-barrier liner',
+      storage: 'Store in tightly closed, corrosion-resistant containers in a dry, well-ventilated area',
+      shelfLife: '36 Months from Manufacturing Date',
+      dosageForms: ['Total Parenteral Nutrition (TPN) Additives', 'Trace Mineral Injections', 'Dietary Supplement Tablets', 'Metabolic Mineral Solutions'],
+      industries: ['Parenteral Nutrition & Infusion', 'Pharmaceutical Compounding', 'Nutritional Mineral Premixes']
+    },
+    'chromium-chloride': {
+      chemicalName: 'Chromium (III) Chloride Hexahydrate (USP Grade)',
+      formula: 'CrCl₃ · 6H₂O',
+      mw: '266.45 g/mol',
+      appearance: 'Dark green crystalline powder or granules, deliquescent',
+      assay: '98.0% – 102.0% CrCl₃ · 6H₂O (USP Compendial)',
+      solubility: 'Freely soluble in water and in alcohol; practically insoluble in ether',
+      packaging: '25 Kg Fibre Drums / HDPE Drums with polyethylene moisture-barrier liner',
+      storage: 'Store in tightly closed, corrosion-resistant containers in a dry, well-ventilated area',
+      shelfLife: '36 Months from Manufacturing Date',
+      dosageForms: ['Total Parenteral Nutrition (TPN) Additives', 'Trace Mineral Injections', 'Dietary Supplement Tablets', 'Metabolic Mineral Solutions'],
+      industries: ['Parenteral Nutrition & Infusion', 'Pharmaceutical Compounding', 'Nutritional Mineral Premixes']
+    },
+    'chromium-poly-nicotinate': {
+      chemicalName: 'Chromium (III) Polynicotinate (Niacin Chelate)',
+      formula: 'Cr(C₆H₄NO₂)₃',
+      mw: '418.30 g/mol',
+      appearance: 'Fine purplish-grey to greyish-brown powder',
+      assay: 'Elemental Chromium ≥ 10.0%',
+      solubility: 'Partially soluble in water; soluble in dilute mineral acids',
+      packaging: '25 Kg Fibre Drum with double polyethylene bag',
+      storage: 'Tightly closed in a cool, ventilated area away from humidity',
+      shelfLife: '36 Months from Manufacturing Date',
+      dosageForms: ['Dietary Mineral Tablets', 'Nutraceutical Hard Capsules', 'Metabolic Support Premixes'],
+      industries: ['Nutraceutical Manufacturing', 'Sports Nutrition', 'Dietary Supplement Brands']
+    },
+    'piperazine-dihydrochloride': {
+      chemicalName: 'Piperazine Dihydrochloride Monohydrate',
+      formula: 'C₄H₁₀N₂ · 2HCl',
+      mw: '159.06 g/mol (anhydrous)',
+      appearance: 'White crystalline powder or granular flakes, freely soluble',
+      assay: '98.0% – 101.5% (Potentiometric on dried basis)',
+      solubility: 'Freely soluble in water; sparingly soluble in alcohol (96%)',
+      packaging: '25 Kg Fibre Drum with double polyethylene inner liner',
+      storage: 'Store in tightly closed, moisture-resistant containers below 25°C',
+      shelfLife: '36 Months from Manufacturing Date',
+      dosageForms: ['Soluble Deworming Powders', 'Veterinary Drinking Water Solutions', 'Anthelmintic Tablets', 'Oral Deworming Suspensions'],
+      industries: ['Veterinary Pharmaceuticals', 'Poultry & Livestock Health', 'Human Anthelmintic Formulations']
+    },
+    'piperazine-adipate': {
+      chemicalName: 'Piperazine Hexanedioate (Piperazine Adipate)',
+      formula: 'C₄H₁₀N₂ · C₆H₁₀O₄',
+      mw: '232.28 g/mol',
+      appearance: 'White, crystalline powder, odourless or almost odourless',
+      assay: '98.5% – 100.5% (Non-aqueous titration on dried basis)',
+      solubility: 'Soluble 1 in 18 of water; practically insoluble in alcohol',
+      packaging: '25 Kg Fibre Drum with polyethylene inner liner',
+      storage: 'Preserve in well-closed containers protected from light and moisture',
+      shelfLife: '36 Months from Manufacturing Date',
+      dosageForms: ['Oral Anthelmintic Tablets', 'Veterinary Boluses', 'Suspension Powders'],
+      industries: ['Human Pharmaceuticals', 'Veterinary Medicine', 'Global Deworming Programs']
     }
   };
 
@@ -591,7 +717,20 @@
         }
       }
 
-      currentProduct = allProducts.find(p => p.id === productId);
+      // Alias resolution map for legacy and alternate product links
+      const aliasMap = {
+        'iodoform': 'iodoform-usp',
+        'iodoform-usp': 'iodoform-usp',
+        'piperazine-adipate': 'piperazine-adipate-ip',
+        'piperazine-adipate-ip': 'piperazine-adipate-ip',
+        'chromium-chloride': 'chromium-chloride-usp',
+        'chromium-chloride-usp': 'chromium-chloride-usp',
+        'chromium-poly-nicotinate': 'chromium-polynicotinate',
+        'chromium-polynicotinate': 'chromium-polynicotinate'
+      };
+      const searchTargetId = (productId && aliasMap[productId]) ? aliasMap[productId] : productId;
+
+      currentProduct = allProducts.find(p => p.id === searchTargetId || p.id === productId);
 
       if (!currentProduct) {
         renderNotFoundState(productId);
@@ -932,7 +1071,7 @@
           Product Monograph Not Found
         </h2>
         <p style="color: #64748B; font-size: 0.95rem; margin-bottom: 2rem;">
-          The requested product identifier <code>${escapeHtml(id || 'unknown')}</code> was not found. Please browse our 38+ active catalogue items.
+          The requested product identifier <code>${escapeHtml(id || 'unknown')}</code> was not found. Please browse our 43+ active catalogue items.
         </p>
         <a href="products.html" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Browse Full Catalogue</a>
       </div>
