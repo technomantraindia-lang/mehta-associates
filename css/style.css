@@ -695,7 +695,7 @@ p:last-child {
   top: calc(100% + 12px);
   left: 50%;
   transform: translateX(-42%) translateY(8px);
-  width: 760px;
+  width: 820px;
   max-width: calc(100vw - 32px);
   background: #FFFFFF;
   border-radius: 16px;
@@ -2189,7 +2189,8 @@ p:last-child {
 .hero-slide-banner .hero-banner-floating-pill {
   position: absolute;
   bottom: 1.5rem;
-  left: 2.5rem;
+  right: 2.5rem;
+  left: auto;
   z-index: 10;
   display: inline-flex;
   align-items: center;
@@ -2506,10 +2507,14 @@ p:last-child {
     flex-shrink: 0;
   }
   .hero-slide-banner .hero-banner-floating-pill {
-    left: 1rem;
-    bottom: 1rem;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    bottom: 0.75rem;
     font-size: 0.75rem;
     padding: 0.4rem 0.5rem 0.4rem 0.85rem;
+    white-space: nowrap;
+    max-width: calc(100% - 1.5rem);
   }
 }
 

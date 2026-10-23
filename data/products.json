@@ -428,5 +428,35 @@
     "description": "Natural source of methyl salicylate extracted from Gaultheria leaves, imparting deep warming sensation.",
     "applications": "Ayurvedic pain balms, topical rubs, liniments, massage oils",
     "image": "assets/images/products/essential-botanical-oils.jpg"
+  },
+  {
+    "id": "white-petroleum-jelly-ip",
+    "name": "White Petroleum Jelly IP",
+    "category": "Preservatives & Excipients",
+    "grade": "I P (Indian Pharmacopoeia)",
+    "cas": "8009-03-8",
+    "description": "High-purity compendial White Soft Paraffin conforming to Indian Pharmacopoeia standards, providing an odorless, unctuous emollient base for topical and ophthalmic formulations.",
+    "applications": "Ophthalmic ointments, topical pharmaceutical salves, barrier creams, lip care formulations, softgel capsule manufacturing",
+    "image": "assets/images/products/white-petroleum-jelly.jpg"
+  },
+  {
+    "id": "light-liquid-paraffin-ip",
+    "name": "Light Liquid Paraffin IP",
+    "category": "Preservatives & Excipients",
+    "grade": "I P (Indian Pharmacopoeia)",
+    "cas": "8042-47-5",
+    "description": "Highly refined, odorless, transparent pharmaceutical light mineral oil adhering strictly to Indian Pharmacopoeia monographs with controlled kinematic viscosity.",
+    "applications": "Topical lotions, skin emulsions, ear drop vehicles, tablet and capsule manufacturing lubricant, baby oils",
+    "image": "assets/images/products/light-liquid-paraffin.jpg"
+  },
+  {
+    "id": "heavy-liquid-paraffin-ip",
+    "name": "Heavy Liquid Paraffin IP",
+    "category": "Preservatives & Excipients",
+    "grade": "I P (Indian Pharmacopoeia)",
+    "cas": "8042-47-5",
+    "description": "High-viscosity pharmaceutical mineral oil conforming to Indian Pharmacopoeia specifications, widely utilized as an internal lubricant laxative and substantive ointment base.",
+    "applications": "Oral laxative emulsions, dense dermatological ointments, protective barrier salves, cosmetic formulations, excipient base",
+    "image": "assets/images/products/heavy-liquid-paraffin.jpg"
   }
 ]

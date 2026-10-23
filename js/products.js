@@ -118,7 +118,13 @@
     'technical-sodium-salicylate': 'assets/images/products/industrial-chemicals.jpg',
     'zinc-picolinate': 'assets/images/products/mineral-chelates.jpg',
     'vitamin-k3-feed': 'assets/images/products/vitamin-k3-feed.jpg',
-    'wintergreen-oil': 'assets/images/products/essential-botanical-oils.jpg'
+    'wintergreen-oil': 'assets/images/products/essential-botanical-oils.jpg',
+    'white-petroleum-jelly-ip': 'assets/images/products/white-petroleum-jelly.jpg',
+    'white-petroleum-jelly': 'assets/images/products/white-petroleum-jelly.jpg',
+    'light-liquid-paraffin-ip': 'assets/images/products/light-liquid-paraffin.jpg',
+    'light-liquid-paraffin': 'assets/images/products/light-liquid-paraffin.jpg',
+    'heavy-liquid-paraffin-ip': 'assets/images/products/heavy-liquid-paraffin.jpg',
+    'heavy-liquid-paraffin': 'assets/images/products/heavy-liquid-paraffin.jpg'
   };
 
   function getProductImage(product) {

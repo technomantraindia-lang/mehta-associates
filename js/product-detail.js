@@ -55,7 +55,13 @@
     'technical-sodium-salicylate': 'assets/images/products/industrial-chemicals.jpg',
     'zinc-picolinate': 'assets/images/products/mineral-chelates.jpg',
     'vitamin-k3-feed': 'assets/images/products/vitamin-k3-feed.jpg',
-    'wintergreen-oil': 'assets/images/products/essential-botanical-oils.jpg'
+    'wintergreen-oil': 'assets/images/products/essential-botanical-oils.jpg',
+    'white-petroleum-jelly-ip': 'assets/images/products/white-petroleum-jelly.jpg',
+    'white-petroleum-jelly': 'assets/images/products/white-petroleum-jelly.jpg',
+    'light-liquid-paraffin-ip': 'assets/images/products/light-liquid-paraffin.jpg',
+    'light-liquid-paraffin': 'assets/images/products/light-liquid-paraffin.jpg',
+    'heavy-liquid-paraffin-ip': 'assets/images/products/heavy-liquid-paraffin.jpg',
+    'heavy-liquid-paraffin': 'assets/images/products/heavy-liquid-paraffin.jpg'
   };
 
   function formatCategoryShort(cat) {
@@ -695,6 +701,84 @@
       shelfLife: '36 Months from Manufacturing Date',
       dosageForms: ['Oral Anthelmintic Tablets', 'Veterinary Boluses', 'Suspension Powders'],
       industries: ['Human Pharmaceuticals', 'Veterinary Medicine', 'Global Deworming Programs']
+    },
+    'white-petroleum-jelly-ip': {
+      chemicalName: 'White Soft Paraffin IP / White Petrolatum',
+      formula: 'CₙH₂ₙ₊₂ (Hydrocarbon Polymer Matrix)',
+      mw: 'Semi-Solid Complex Base',
+      appearance: 'White or almost white, translucent, soft unctuous mass, odorless when cold',
+      assay: 'Conforms to IP compendial monograph (Melting point 38°C – 56°C)',
+      solubility: 'Practically insoluble in water and ethanol; soluble in chloroform and solvent ether',
+      packaging: '170 Kg / 190 Kg Steel Drums, 50 Kg HDPE Drums with moisture seal',
+      storage: 'Store in well-closed containers, protected from light and heat below 30°C',
+      shelfLife: '36 Months from Manufacturing Date',
+      dosageForms: ['Ophthalmic Ointments', 'Topical Medicated Salves', 'Dermatological Barrier Creams', 'Lip Care Formulations'],
+      industries: ['Pharmaceutical Finished Dosage', 'Dermatology & Cosmeceuticals', 'Personal Healthcare']
+    },
+    'white-petroleum-jelly': {
+      chemicalName: 'White Soft Paraffin IP / White Petrolatum',
+      formula: 'CₙH₂ₙ₊₂ (Hydrocarbon Polymer Matrix)',
+      mw: 'Semi-Solid Complex Base',
+      appearance: 'White or almost white, translucent, soft unctuous mass, odorless when cold',
+      assay: 'Conforms to IP compendial monograph (Melting point 38°C – 56°C)',
+      solubility: 'Practically insoluble in water and ethanol; soluble in chloroform and solvent ether',
+      packaging: '170 Kg / 190 Kg Steel Drums, 50 Kg HDPE Drums with moisture seal',
+      storage: 'Store in well-closed containers, protected from light and heat below 30°C',
+      shelfLife: '36 Months from Manufacturing Date',
+      dosageForms: ['Ophthalmic Ointments', 'Topical Medicated Salves', 'Dermatological Barrier Creams', 'Lip Care Formulations'],
+      industries: ['Pharmaceutical Finished Dosage', 'Dermatology & Cosmeceuticals', 'Personal Healthcare']
+    },
+    'light-liquid-paraffin-ip': {
+      chemicalName: 'Light Liquid Paraffin IP / Mineral Oil (Low Viscosity)',
+      formula: 'Purified Liquid Saturated Hydrocarbons',
+      mw: 'Kinematic Viscosity 25–80 mm²/s at 20°C',
+      appearance: 'Colorless, transparent, oily liquid, free from fluorescence, odorless',
+      assay: 'Conforms to IP specifications (Relative density 0.830 – 0.870 g/mL)',
+      solubility: 'Practically insoluble in water, slightly soluble in alcohol; miscible with hydrocarbons',
+      packaging: '200 L / 175 Kg Epoxy Coated Steel Drums, 25 Kg Carboys, Bulk Tankers',
+      storage: 'Store in tightly closed containers protected from light and moisture',
+      shelfLife: '36 Months from Manufacturing Date',
+      dosageForms: ['Topical Lotions & Emulsions', 'Pediatric Formulations', 'Ear Drop Vehicles', 'Tablet Polishing & Lubricant'],
+      industries: ['Pharmaceutical Formulations', 'Dermatologicals', 'Cosmeceuticals & Skincare', 'Veterinary Products']
+    },
+    'light-liquid-paraffin': {
+      chemicalName: 'Light Liquid Paraffin IP / Mineral Oil (Low Viscosity)',
+      formula: 'Purified Liquid Saturated Hydrocarbons',
+      mw: 'Kinematic Viscosity 25–80 mm²/s at 20°C',
+      appearance: 'Colorless, transparent, oily liquid, free from fluorescence, odorless',
+      assay: 'Conforms to IP specifications (Relative density 0.830 – 0.870 g/mL)',
+      solubility: 'Practically insoluble in water, slightly soluble in alcohol; miscible with hydrocarbons',
+      packaging: '200 L / 175 Kg Epoxy Coated Steel Drums, 25 Kg Carboys, Bulk Tankers',
+      storage: 'Store in tightly closed containers protected from light and moisture',
+      shelfLife: '36 Months from Manufacturing Date',
+      dosageForms: ['Topical Lotions & Emulsions', 'Pediatric Formulations', 'Ear Drop Vehicles', 'Tablet Polishing & Lubricant'],
+      industries: ['Pharmaceutical Formulations', 'Dermatologicals', 'Cosmeceuticals & Skincare', 'Veterinary Products']
+    },
+    'heavy-liquid-paraffin-ip': {
+      chemicalName: 'Heavy Liquid Paraffin IP / Mineral Oil (High Viscosity)',
+      formula: 'Purified Liquid Saturated Hydrocarbons',
+      mw: 'Kinematic Viscosity not less than 110 mm²/s at 20°C',
+      appearance: 'Colorless, transparent, oily liquid, odorless and tasteless without fluorescence',
+      assay: 'Conforms to IP specifications (Relative density 0.860 – 0.890 g/mL)',
+      solubility: 'Practically insoluble in water and ethanol; miscible with ether and volatile oils',
+      packaging: '200 L / 175 Kg Epoxy Coated Steel Drums, 25 Kg Carboys, Bulk Tankers',
+      storage: 'Store in tightly sealed containers protected from light and excessive heat',
+      shelfLife: '36 Months from Manufacturing Date',
+      dosageForms: ['Oral Laxative Emulsions', 'Dense Topical Ointments', 'Ophthalmic Lubricants', 'Sustained Barrier Salves'],
+      industries: ['Pharmaceutical Manufacturing', 'Gastroenterology / OTC Formulations', 'Topical Therapeutics']
+    },
+    'heavy-liquid-paraffin': {
+      chemicalName: 'Heavy Liquid Paraffin IP / Mineral Oil (High Viscosity)',
+      formula: 'Purified Liquid Saturated Hydrocarbons',
+      mw: 'Kinematic Viscosity not less than 110 mm²/s at 20°C',
+      appearance: 'Colorless, transparent, oily liquid, odorless and tasteless without fluorescence',
+      assay: 'Conforms to IP specifications (Relative density 0.860 – 0.890 g/mL)',
+      solubility: 'Practically insoluble in water and ethanol; miscible with ether and volatile oils',
+      packaging: '200 L / 175 Kg Epoxy Coated Steel Drums, 25 Kg Carboys, Bulk Tankers',
+      storage: 'Store in tightly sealed containers protected from light and excessive heat',
+      shelfLife: '36 Months from Manufacturing Date',
+      dosageForms: ['Oral Laxative Emulsions', 'Dense Topical Ointments', 'Ophthalmic Lubricants', 'Sustained Barrier Salves'],
+      industries: ['Pharmaceutical Manufacturing', 'Gastroenterology / OTC Formulations', 'Topical Therapeutics']
     }
   };
 
@@ -1071,7 +1155,7 @@
           Product Monograph Not Found
         </h2>
         <p style="color: #64748B; font-size: 0.95rem; margin-bottom: 2rem;">
-          The requested product identifier <code>${escapeHtml(id || 'unknown')}</code> was not found. Please browse our 43+ active catalogue items.
+          The requested product identifier <code>${escapeHtml(id || 'unknown')}</code> was not found. Please browse our 46+ active catalogue items.
         </p>
         <a href="products.html" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Browse Full Catalogue</a>
       </div>

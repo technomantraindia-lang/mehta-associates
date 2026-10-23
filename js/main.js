@@ -630,7 +630,7 @@ document.addEventListener('DOMContentLoaded', () => {
           resultsContainer.innerHTML = `
             <div class="header-search-empty">
               <p>No products matching "<strong>${escapeHtml(raw)}</strong>"</p>
-              <p style="font-size: 0.75rem; margin-top: 0.35rem; color: #94A3B8;">Press Enter to search full 43+ product catalogue.</p>
+              <p style="font-size: 0.75rem; margin-top: 0.35rem; color: #94A3B8;">Press Enter to search full 46+ product catalogue.</p>
             </div>
           `;
         } else {
