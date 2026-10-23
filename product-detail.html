@@ -43,9 +43,9 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css?v=prod1">
-  <link rel="stylesheet" href="css/responsive.css?v=prod1">
-  <link rel="stylesheet" href="css/animations.css?v=prod1">
   <link rel="stylesheet" href="css/product-detail.css?v=prod1">
+  <link rel="stylesheet" href="css/animations.css?v=prod1">
+  <link rel="stylesheet" href="css/responsive.css?v=prod1">
 
   <!-- Structured Data: BreadcrumbList (JSON-LD) -->
   <script type="application/ld+json" id="breadcrumb-jsonld">
@@ -326,8 +326,11 @@
   <div class="mobile-nav-backdrop"></div>
   <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Menu">
     <div>
-      <div style="margin-bottom: 1.5rem;">
-        <img src="assets/images/logo.png" alt="Mehta Associates" style="height: 52px; width: auto;">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+        <img src="assets/images/logo.png" alt="Mehta Associates" style="height: 44px; width: auto;">
+        <button type="button" class="mobile-drawer-close-btn" aria-label="Close navigation menu" onclick="closeMobileNav()">
+          <i data-lucide="x" style="width: 22px; height: 22px;"></i>
+        </button>
       </div>
       <!-- Mobile Drawer Search Bar -->
       <div class="mobile-drawer-search">

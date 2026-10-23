@@ -272,6 +272,14 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileBackdrop.addEventListener('click', closeMobileNav);
   }
 
+  window.openMobileNav = openMobileNav;
+  window.closeMobileNav = closeMobileNav;
+
+  const drawerCloseBtn = document.querySelector('.mobile-drawer-close-btn');
+  if (drawerCloseBtn) {
+    drawerCloseBtn.addEventListener('click', closeMobileNav);
+  }
+
   // Close mobile nav on link click or ESC
   document.querySelectorAll('.mobile-nav-links .nav-link, .mobile-submenu-link').forEach(link => {
     link.addEventListener('click', closeMobileNav);

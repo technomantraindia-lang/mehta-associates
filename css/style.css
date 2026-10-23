@@ -1671,6 +1671,27 @@ p:last-child {
   right: 0;
 }
 
+.mobile-drawer-close-btn {
+  background: transparent;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #0F172A;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.mobile-drawer-close-btn:hover {
+  background-color: #F1F5F9;
+  border-color: #CBD5E1;
+  color: var(--color-primary);
+}
+
 .mobile-nav-backdrop {
   position: fixed;
   inset: 0;

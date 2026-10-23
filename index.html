@@ -43,8 +43,8 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css?v=prod1">
-  <link rel="stylesheet" href="css/responsive.css?v=prod1">
   <link rel="stylesheet" href="css/animations.css?v=prod1">
+  <link rel="stylesheet" href="css/responsive.css?v=prod1">
 
   <!-- Structured Data: Organization, LocalBusiness & WebSite (JSON-LD) -->
   <script type="application/ld+json">
@@ -397,8 +397,11 @@
   <div class="mobile-nav-backdrop"></div>
   <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Menu">
     <div>
-      <div style="margin-bottom: 1.5rem;">
-        <img src="assets/images/logo.png" alt="Mehta Associates" style="height: 52px; width: auto;">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+        <img src="assets/images/logo.png" alt="Mehta Associates" style="height: 44px; width: auto;">
+        <button type="button" class="mobile-drawer-close-btn" aria-label="Close navigation menu" onclick="closeMobileNav()">
+          <i data-lucide="x" style="width: 22px; height: 22px;"></i>
+        </button>
       </div>
       <!-- Mobile Drawer Search Bar -->
       <div class="mobile-drawer-search">
@@ -497,7 +500,8 @@
           <img src="assets/images/cphi-india-2026-banner.png?v=stall50" alt="CPHI India 2026 Exhibition - Mehta Associates Stall IP-50 at IICC Yashobhoomi, Dwarka, New Delhi" class="hero-banner-img" fetchpriority="high" decoding="async">
           <div class="hero-banner-floating-pill">
             <span class="banner-live-pulse"></span>
-            <span>Exhibiting at CPHI India 2026 &bull; Stall No. IP-50 &bull; Yashobhoomi IICC</span>
+            <span class="pill-desktop-text">Exhibiting at CPHI India 2026 &bull; Stall No. IP-50 &bull; Yashobhoomi IICC</span>
+            <span class="pill-mobile-text">CPHI 2026 &bull; Stall IP-50</span>
             <a href="#section-enquiry" class="banner-pill-btn" onclick="if(window.openEnquiryModal){openEnquiryModal('CPHI India 2026 Meeting &amp; Stall Inquiry (Stall IP-50)');}event.preventDefault();">
               <span>Book Meeting</span>
               <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
