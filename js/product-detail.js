@@ -869,6 +869,66 @@
       metaDesc.setAttribute('content', `Source bulk ${product.name} (CAS ${product.cas || 'Monograph'}). Verified ${product.grade} standard with batch COA from Mehta Associates Mumbai.`);
     }
 
+    // Dynamic Canonical & Social Tags
+    const canonicalLink = document.getElementById('canonical-url');
+    if (canonicalLink) {
+      canonicalLink.setAttribute('href', `https://mehtaassociates.co.in/product-detail.html?id=${encodeURIComponent(product.id)}`);
+    }
+
+    const fullPhotoUrl = photoUrl ? `https://mehtaassociates.co.in/${photoUrl}` : 'https://mehtaassociates.co.in/assets/images/logo.png';
+    const ogTitle = document.getElementById('og-title');
+    if (ogTitle) ogTitle.setAttribute('content', `${product.name} (${product.grade}) | Mehta Associates`);
+    const ogDesc = document.getElementById('og-desc');
+    if (ogDesc) ogDesc.setAttribute('content', `Source verified ${product.name} (${product.grade}) from Mehta Associates Mumbai. Pharmacopoeial grade with batch COA.`);
+    const ogUrl = document.getElementById('og-url');
+    if (ogUrl) ogUrl.setAttribute('content', `https://mehtaassociates.co.in/product-detail.html?id=${encodeURIComponent(product.id)}`);
+    const ogImage = document.getElementById('og-image');
+    if (ogImage) ogImage.setAttribute('content', fullPhotoUrl);
+
+    const twTitle = document.getElementById('twitter-title');
+    if (twTitle) twTitle.setAttribute('content', `${product.name} (${product.grade}) | Mehta Associates`);
+    const twDesc = document.getElementById('twitter-desc');
+    if (twDesc) twDesc.setAttribute('content', `Source verified ${product.name} (${product.grade}) from Mehta Associates Mumbai.`);
+    const twImage = document.getElementById('twitter-image');
+    if (twImage) twImage.setAttribute('content', fullPhotoUrl);
+
+    // Dynamic Schema.org Product Structured Data
+    let productSchemaScript = document.getElementById('product-schema-jsonld');
+    if (!productSchemaScript) {
+      productSchemaScript = document.createElement('script');
+      productSchemaScript.id = 'product-schema-jsonld';
+      productSchemaScript.type = 'application/ld+json';
+      document.head.appendChild(productSchemaScript);
+    }
+    productSchemaScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": `${product.name} (${product.grade})`,
+      "image": fullPhotoUrl,
+      "description": specs.chemicalName ? `${product.name} (${product.grade}) - ${specs.chemicalName}. ${product.description || ''}` : (product.description || `${product.name} pharmaceutical grade`),
+      "sku": product.id,
+      "mpn": product.cas || product.id,
+      "category": product.category,
+      "brand": {
+        "@type": "Brand",
+        "name": "Mehta Associates"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Mehta Associates",
+        "url": "https://mehtaassociates.co.in/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": `https://mehtaassociates.co.in/product-detail.html?id=${encodeURIComponent(product.id)}`,
+        "priceCurrency": "INR",
+        "price": "0",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition"
+      }
+    });
+
     // Breadcrumbs
     const bcCat = document.getElementById('breadcrumb-category');
     if (bcCat) {
